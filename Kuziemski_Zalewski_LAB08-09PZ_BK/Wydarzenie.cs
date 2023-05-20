@@ -11,7 +11,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
     public String Nazwa{get;set;}
     public String Opis { get; set; }
     public abstract Boolean CzywDniu(DateOnly dzień);
-
+    public abstract TimeSpan IlePozostało(DateTime Teraz);
         public override string ToString()
         {
             return $"Nazwa: {Nazwa}, Opis: {Opis}";

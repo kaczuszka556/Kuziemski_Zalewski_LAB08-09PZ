@@ -60,6 +60,11 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             return this.Where(w => w.Nazwa.Equals(nazwa)).First();
         }
 
+        public Wydarzenie NajblizszeWydarzenie(DateTime teraz)
+        {
+            return this.OrderBy(w => w.IlePozostało(teraz)).First();
+        }
+
         public List<Wydarzenie> ZnajdżWydarzeniaDnia(DateOnly dzień)
         { 
         return this.Where(w=>w.CzywDniu(dzień)).ToList();

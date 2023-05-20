@@ -22,5 +22,16 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             return $"{base.ToString()}, Początek: {Początek}, Koniec: {Koniec}";
         }
 
+        public override TimeSpan IlePozostało(DateTime Teraz)
+        {
+            return Początek - Teraz;
+        }
+
+        public Wydarzenie_Niecałodniowe(String nazwa, String opis, DateTime początek, DateTime koniec) : base(nazwa, opis)
+        {
+            Początek = początek;
+            Koniec = koniec;
+        }
+
     }
 }

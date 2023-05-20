@@ -15,10 +15,19 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             return (Data == dzień);
         }
 
+        public override TimeSpan IlePozostało(DateTime Teraz)
+        {
+            return Data.ToDateTime(TimeOnly.Parse("00:00 AM")) - Teraz;
+        }
+
         public override string ToString()
         {
             return $"{base.ToString()}, Data: {Data}";
         }
 
+        public Wydarzenie_Jednodniowe(String nazwa, String opis,DateOnly data): base(nazwa,opis)
+        {
+            Data = data;
+        }
     }
 }
