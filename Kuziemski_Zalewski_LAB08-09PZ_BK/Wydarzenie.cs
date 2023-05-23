@@ -17,5 +17,10 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             return $"Nazwa: {Nazwa}, Opis: {Opis}";
         }
 
+        protected Wydarzenie(string nazwa, string opis)
+        {
+            Nazwa = nazwa;
+            Opis = opis;
+        }
     }
 }

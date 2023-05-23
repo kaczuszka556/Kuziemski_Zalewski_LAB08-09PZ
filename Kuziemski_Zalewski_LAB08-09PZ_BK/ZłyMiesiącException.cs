@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kuziemski_Zalewski_LAB08_09PZ_BK
 {
-    internal class ZłyMiesiącException
+    internal class ZłyMiesiącException : Exception
     {
     }
 }
