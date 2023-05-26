@@ -395,11 +395,13 @@
             LeftKalendarzTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             LeftKalendarzTable.Size = new Size(352, 260);
             LeftKalendarzTable.TabIndex = 2;
+            LeftKalendarzTable.CellPaint += LeftKalendarzTable_CellPaint;
             LeftKalendarzTable.Paint += LeftKalendarzTable_Paint;
             // 
             // label52
             // 
             label52.AutoSize = true;
+            label52.BackColor = Color.Transparent;
             label52.Dock = DockStyle.Fill;
             label52.ForeColor = Color.Red;
             label52.Location = new Point(303, 215);
@@ -411,6 +413,7 @@
             // label51
             // 
             label51.AutoSize = true;
+            label51.BackColor = Color.Transparent;
             label51.Dock = DockStyle.Fill;
             label51.Location = new Point(253, 215);
             label51.Name = "label51";
@@ -421,6 +424,7 @@
             // label50
             // 
             label50.AutoSize = true;
+            label50.BackColor = Color.Transparent;
             label50.Dock = DockStyle.Fill;
             label50.Location = new Point(203, 215);
             label50.Name = "label50";
@@ -431,6 +435,7 @@
             // label49
             // 
             label49.AutoSize = true;
+            label49.BackColor = Color.Transparent;
             label49.Dock = DockStyle.Fill;
             label49.Location = new Point(153, 215);
             label49.Name = "label49";
@@ -441,6 +446,7 @@
             // label48
             // 
             label48.AutoSize = true;
+            label48.BackColor = Color.Transparent;
             label48.Dock = DockStyle.Fill;
             label48.Location = new Point(104, 215);
             label48.Name = "label48";
@@ -451,6 +457,7 @@
             // label47
             // 
             label47.AutoSize = true;
+            label47.BackColor = Color.Transparent;
             label47.Dock = DockStyle.Fill;
             label47.Location = new Point(53, 215);
             label47.Name = "label47";
@@ -461,6 +468,7 @@
             // label46
             // 
             label46.AutoSize = true;
+            label46.BackColor = Color.Transparent;
             label46.Dock = DockStyle.Fill;
             label46.Location = new Point(3, 215);
             label46.Name = "label46";
@@ -471,6 +479,7 @@
             // label45
             // 
             label45.AutoSize = true;
+            label45.BackColor = Color.Transparent;
             label45.Dock = DockStyle.Fill;
             label45.ForeColor = Color.Red;
             label45.Location = new Point(303, 172);
@@ -482,6 +491,7 @@
             // label44
             // 
             label44.AutoSize = true;
+            label44.BackColor = Color.Transparent;
             label44.Dock = DockStyle.Fill;
             label44.Location = new Point(253, 172);
             label44.Name = "label44";
@@ -492,6 +502,7 @@
             // label43
             // 
             label43.AutoSize = true;
+            label43.BackColor = Color.Transparent;
             label43.Dock = DockStyle.Fill;
             label43.Location = new Point(203, 172);
             label43.Name = "label43";
@@ -502,6 +513,7 @@
             // label42
             // 
             label42.AutoSize = true;
+            label42.BackColor = Color.Transparent;
             label42.Dock = DockStyle.Fill;
             label42.Location = new Point(153, 172);
             label42.Name = "label42";
@@ -512,6 +524,7 @@
             // label41
             // 
             label41.AutoSize = true;
+            label41.BackColor = Color.Transparent;
             label41.Dock = DockStyle.Fill;
             label41.Location = new Point(104, 172);
             label41.Name = "label41";
@@ -522,6 +535,7 @@
             // label40
             // 
             label40.AutoSize = true;
+            label40.BackColor = Color.Transparent;
             label40.Dock = DockStyle.Fill;
             label40.Location = new Point(53, 172);
             label40.Name = "label40";
@@ -532,6 +546,7 @@
             // label39
             // 
             label39.AutoSize = true;
+            label39.BackColor = Color.Transparent;
             label39.Dock = DockStyle.Fill;
             label39.Location = new Point(3, 172);
             label39.Name = "label39";
@@ -542,6 +557,7 @@
             // label38
             // 
             label38.AutoSize = true;
+            label38.BackColor = Color.Transparent;
             label38.Dock = DockStyle.Fill;
             label38.ForeColor = Color.Red;
             label38.Location = new Point(303, 129);
@@ -553,6 +569,7 @@
             // label37
             // 
             label37.AutoSize = true;
+            label37.BackColor = Color.Transparent;
             label37.Dock = DockStyle.Fill;
             label37.Location = new Point(203, 129);
             label37.Name = "label37";
@@ -563,6 +580,7 @@
             // label36
             // 
             label36.AutoSize = true;
+            label36.BackColor = Color.Transparent;
             label36.Dock = DockStyle.Fill;
             label36.Location = new Point(153, 129);
             label36.Name = "label36";
@@ -573,6 +591,7 @@
             // label35
             // 
             label35.AutoSize = true;
+            label35.BackColor = Color.Transparent;
             label35.Dock = DockStyle.Fill;
             label35.Location = new Point(104, 129);
             label35.Name = "label35";
@@ -593,6 +612,7 @@
             // label33
             // 
             label33.AutoSize = true;
+            label33.BackColor = Color.Transparent;
             label33.Dock = DockStyle.Fill;
             label33.Location = new Point(3, 129);
             label33.Name = "label33";
@@ -603,6 +623,7 @@
             // label32
             // 
             label32.AutoSize = true;
+            label32.BackColor = Color.Transparent;
             label32.Dock = DockStyle.Fill;
             label32.ForeColor = Color.Red;
             label32.Location = new Point(303, 86);
@@ -614,6 +635,7 @@
             // label31
             // 
             label31.AutoSize = true;
+            label31.BackColor = Color.Transparent;
             label31.Dock = DockStyle.Fill;
             label31.Location = new Point(253, 86);
             label31.Name = "label31";
@@ -624,6 +646,7 @@
             // label30
             // 
             label30.AutoSize = true;
+            label30.BackColor = Color.Transparent;
             label30.Dock = DockStyle.Fill;
             label30.Location = new Point(203, 86);
             label30.Name = "label30";
@@ -634,6 +657,7 @@
             // label29
             // 
             label29.AutoSize = true;
+            label29.BackColor = Color.Transparent;
             label29.Dock = DockStyle.Fill;
             label29.Location = new Point(153, 86);
             label29.Name = "label29";
@@ -644,6 +668,7 @@
             // label28
             // 
             label28.AutoSize = true;
+            label28.BackColor = Color.Transparent;
             label28.Dock = DockStyle.Fill;
             label28.Location = new Point(104, 86);
             label28.Name = "label28";
@@ -654,6 +679,7 @@
             // label27
             // 
             label27.AutoSize = true;
+            label27.BackColor = Color.Transparent;
             label27.Dock = DockStyle.Fill;
             label27.Location = new Point(53, 86);
             label27.Name = "label27";
@@ -664,6 +690,7 @@
             // label26
             // 
             label26.AutoSize = true;
+            label26.BackColor = Color.Transparent;
             label26.Dock = DockStyle.Fill;
             label26.Location = new Point(3, 86);
             label26.Name = "label26";
@@ -674,6 +701,7 @@
             // label25
             // 
             label25.AutoSize = true;
+            label25.BackColor = Color.Transparent;
             label25.Dock = DockStyle.Fill;
             label25.ForeColor = Color.Red;
             label25.Location = new Point(303, 43);
@@ -685,6 +713,7 @@
             // label24
             // 
             label24.AutoSize = true;
+            label24.BackColor = Color.Transparent;
             label24.Dock = DockStyle.Fill;
             label24.Location = new Point(253, 43);
             label24.Name = "label24";
@@ -695,6 +724,7 @@
             // label23
             // 
             label23.AutoSize = true;
+            label23.BackColor = Color.Transparent;
             label23.Dock = DockStyle.Fill;
             label23.Location = new Point(203, 43);
             label23.Name = "label23";
@@ -705,6 +735,7 @@
             // label22
             // 
             label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
             label22.Dock = DockStyle.Fill;
             label22.Location = new Point(153, 43);
             label22.Name = "label22";
@@ -715,6 +746,7 @@
             // label21
             // 
             label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
             label21.Dock = DockStyle.Fill;
             label21.Location = new Point(104, 43);
             label21.Name = "label21";
@@ -725,6 +757,7 @@
             // label20
             // 
             label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
             label20.Dock = DockStyle.Fill;
             label20.Location = new Point(53, 43);
             label20.Name = "label20";
@@ -735,6 +768,7 @@
             // label19
             // 
             label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
             label19.Dock = DockStyle.Fill;
             label19.Location = new Point(3, 43);
             label19.Name = "label19";
@@ -745,6 +779,7 @@
             // label15
             // 
             label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
             label15.Dock = DockStyle.Fill;
             label15.ForeColor = Color.Red;
             label15.Location = new Point(303, 0);
@@ -756,6 +791,7 @@
             // label14
             // 
             label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
             label14.Dock = DockStyle.Fill;
             label14.Location = new Point(253, 0);
             label14.Name = "label14";
@@ -766,6 +802,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Dock = DockStyle.Fill;
             label13.Location = new Point(203, 0);
             label13.Name = "label13";
@@ -776,6 +813,7 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
             label12.Dock = DockStyle.Fill;
             label12.Location = new Point(153, 0);
             label12.Name = "label12";
@@ -786,6 +824,7 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
             label11.Dock = DockStyle.Fill;
             label11.Location = new Point(104, 0);
             label11.Name = "label11";
@@ -796,6 +835,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
             label10.Dock = DockStyle.Fill;
             label10.Location = new Point(53, 0);
             label10.Name = "label10";
@@ -806,6 +846,7 @@
             // label16
             // 
             label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
             label16.Dock = DockStyle.Fill;
             label16.Location = new Point(3, 0);
             label16.Name = "label16";
@@ -816,6 +857,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Dock = DockStyle.Fill;
             label1.Location = new Point(253, 129);
             label1.Name = "label1";

@@ -6,6 +6,9 @@ namespace GUI
     public partial class Main : Form
     {
         private DateTime CurrentDate = DateTime.Now;
+        private int CurrentWeek = 1;
+        private int HighlightedRow = 2;
+        private int[,] CalendarBackColors = new int[6, 6];
 
         public Main()
         {
@@ -13,10 +16,7 @@ namespace GUI
             this.Text = "Kalendarz";
 
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
-
-        }
-        private void LeftKalendarzTable_Paint(object sender, PaintEventArgs e)
-        {
+            //HighlightCurrentWeek();
 
         }
 
@@ -39,14 +39,52 @@ namespace GUI
                     if (licznikDzien == dni)
                         break;
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
+                    
                     if (control != null && control is Label label)
                     {
                         licznikDzien++;
                         label.Text = (licznikDzien).ToString();
+                       //TODO
+                        //label.Click -= CalendarDayClick;
+                        //label.Click += (sender, e) =>
+                        //{
+                        //    CalendarDayClick(sender, new DayEventArgs(licznikDzien, miesiac, rok, row));
+                        //};
                     }
                 }
 
                 pierwszyDzien = 0;
+            }
+        }
+
+        private void CalendarDayClick(object sender, DayEventArgs e)
+        {
+          
+        }
+
+
+        private void HighlightCurrentWeek()
+        {
+            for (int column = 0; column < LeftKalendarzTable.ColumnCount; column++)
+            {
+                Control control = LeftKalendarzTable.GetControlFromPosition(column, CurrentWeek);
+                if (control != null && control is Label label)
+                {
+                    label.BackColor = Color.White;
+                }
+            }
+        }
+
+        private void LeftKalendarzTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LeftKalendarzTable_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (HighlightedRow == e.Row)
+            {
+                e.Graphics.FillRectangle(new SolidBrush(Color.White), e.CellBounds);
             }
         }
 
@@ -77,6 +115,24 @@ namespace GUI
         {
             CurrentDate = CurrentDate.AddMonths(-1);
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
+        }
+
+
+    }
+
+    public class DayEventArgs
+    {
+        public int Day;
+        public int Month;
+        public int Year;
+        public int Week;
+
+        public DayEventArgs(int day, int month, int year, int week)
+        {
+            Day = day;
+            Month = month;
+            Year = year;
+            Week = week;
         }
     }
 }
