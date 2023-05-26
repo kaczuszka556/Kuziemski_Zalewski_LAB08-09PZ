@@ -17,20 +17,35 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
     public DateTime Koniec { get; set; }
 
 
-    public bool CzywDniu(DateOnly dzień)
-    {
-      return (Poczatek.Date.Equals(dzień));
-    }
 
     public override string ToString()
     {
-      return $"Nazwa: {Nazwa}, Opis: {Opis}, Początek: {Poczatek}, Koniec: {Koniec}";
+      return $"Id:{WydarzenieId}, Nazwa: {Nazwa}, Opis: {Opis}, Początek: {Poczatek}, Koniec: {Koniec}";
     }
 
-    public TimeSpan IlePozostało(DateTime Teraz)
+    public TimeSpan IlePozostalo
     {
-       return Poczatek - Teraz;
+            get
+            {
+                return Poczatek - DateTime.Now;
+            }
     }
+
+        public double IleMinutPozostalo
+        {
+            get
+            {
+                return (Poczatek - DateTime.Now).TotalMinutes;
+            }
+        }
+
+        public TimeSpan CzasTrwania
+        {
+            get
+            {
+                return Koniec - Poczatek;
+            }
+        }
 
 
         public Wydarzenie(String nazwa,String opis,DateTime poczatek, DateTime koniec) 
