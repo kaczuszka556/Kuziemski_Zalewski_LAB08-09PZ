@@ -29,12 +29,18 @@ namespace Test
             // k.DeleteWydarzeniaPoDniu(new DateOnly(2023, 10, 10));
             Console.WriteLine(k.LiczbaWydarzeń);
 
+            DateOnly[] daty = Narzędziowa.WszystkieDniWtygodniuPoNumerze(5, 3, 2023);
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine(daty[i]);
+            }
 
             //k.
             //Console.WriteLine(k.NajblizszeWydarzenie.ToString());
             // k.ZnajdżWydarzeniaDnia
 
-            Console.WriteLine(Narzędziowa.KtóryTydzień(new DateOnly(2021, 05, 02)));
+            Console.WriteLine(Narzędziowa.KtóryTydzień(new DateOnly(2023, 05, 29)));
             Console.WriteLine("Hello, World!");
         }
     }

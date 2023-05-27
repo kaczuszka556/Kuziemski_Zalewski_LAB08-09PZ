@@ -55,6 +55,70 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             }
         }
 
+        public static DateOnly[] WszystkieDniWtygodniu(DateOnly d)
+        {
+          DateOnly[] dni= new DateOnly[7];
+         
+            int i = (int)d.DayOfWeek;
+
+            DateOnly d2 = d;
+            while (i!=1)
+            {
+                i =(int) d2.DayOfWeek;
+                d2=d2.AddDays(-1);
+            }
+
+            if (d != d2)
+            {
+                d2 = d2.AddDays(1);
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                dni[j] = d2;
+                d2 = d2.AddDays(1);
+            }
+
+            return dni;
+        }
+
+        public static DateOnly[] WszystkieDniWtygodniuPoNumerze(int tydzien,int miesiac,int rok)
+        {
+            DateOnly[] dni = new DateOnly[7];
+
+            DateOnly d=new DateOnly(rok, miesiac,1);
+
+            int pom = KtóryTydzień(d);
+
+            while (pom != tydzien)
+            {
+                d=d.AddDays(1);
+                pom = KtóryTydzień(d);
+            }
+
+            int i = (int)d.DayOfWeek;
+
+            DateOnly d2 = d;
+            while (i != 1)
+            {
+                i = (int)d2.DayOfWeek;
+                d2 = d2.AddDays(-1);
+            }
+
+            if (d != d2)
+            {
+                d2 = d2.AddDays(1);
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                dni[j] = d2;
+                d2 = d2.AddDays(1);
+            }
+
+            return dni;
+        }
+
+
+
         public static int PierwszyDzień(int miesiąc, int rok)
         {
             if (miesiąc > 12 || miesiąc < 1)
