@@ -49,48 +49,48 @@
             label4 = new Label();
             label3 = new Label();
             LeftKalendarzTable = new TableLayoutPanel();
-            label52 = new Label();
-            label51 = new Label();
-            label50 = new Label();
-            label49 = new Label();
-            label48 = new Label();
-            label47 = new Label();
-            label46 = new Label();
-            label45 = new Label();
-            label44 = new Label();
-            label43 = new Label();
-            label42 = new Label();
-            label41 = new Label();
-            label40 = new Label();
-            label39 = new Label();
-            label38 = new Label();
-            label37 = new Label();
-            label36 = new Label();
-            label35 = new Label();
-            label34 = new Label();
-            label33 = new Label();
-            label32 = new Label();
-            label31 = new Label();
-            label30 = new Label();
-            label29 = new Label();
-            label28 = new Label();
-            label27 = new Label();
-            label26 = new Label();
-            label25 = new Label();
-            label24 = new Label();
-            label23 = new Label();
-            label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            label16 = new Label();
-            label1 = new Label();
+            calendarDayLabel42 = new CalendarDayLabel();
+            calendarDayLabel41 = new CalendarDayLabel();
+            calendarDayLabel40 = new CalendarDayLabel();
+            calendarDayLabel39 = new CalendarDayLabel();
+            calendarDayLabel38 = new CalendarDayLabel();
+            calendarDayLabel37 = new CalendarDayLabel();
+            calendarDayLabel36 = new CalendarDayLabel();
+            calendarDayLabel35 = new CalendarDayLabel();
+            calendarDayLabel34 = new CalendarDayLabel();
+            calendarDayLabel33 = new CalendarDayLabel();
+            calendarDayLabel32 = new CalendarDayLabel();
+            calendarDayLabel31 = new CalendarDayLabel();
+            calendarDayLabel30 = new CalendarDayLabel();
+            calendarDayLabel29 = new CalendarDayLabel();
+            calendarDayLabel28 = new CalendarDayLabel();
+            calendarDayLabel27 = new CalendarDayLabel();
+            calendarDayLabel26 = new CalendarDayLabel();
+            calendarDayLabel25 = new CalendarDayLabel();
+            calendarDayLabel24 = new CalendarDayLabel();
+            calendarDayLabel23 = new CalendarDayLabel();
+            calendarDayLabel22 = new CalendarDayLabel();
+            calendarDayLabel21 = new CalendarDayLabel();
+            calendarDayLabel20 = new CalendarDayLabel();
+            calendarDayLabel19 = new CalendarDayLabel();
+            calendarDayLabel18 = new CalendarDayLabel();
+            calendarDayLabel17 = new CalendarDayLabel();
+            calendarDayLabel16 = new CalendarDayLabel();
+            calendarDayLabel15 = new CalendarDayLabel();
+            calendarDayLabel14 = new CalendarDayLabel();
+            calendarDayLabel13 = new CalendarDayLabel();
+            calendarDayLabel12 = new CalendarDayLabel();
+            calendarDayLabel11 = new CalendarDayLabel();
+            calendarDayLabel10 = new CalendarDayLabel();
+            calendarDayLabel9 = new CalendarDayLabel();
+            calendarDayLabel8 = new CalendarDayLabel();
+            calendarDayLabel7 = new CalendarDayLabel();
+            calendarDayLabel6 = new CalendarDayLabel();
+            calendarDayLabel5 = new CalendarDayLabel();
+            calendarDayLabel4 = new CalendarDayLabel();
+            calendarDayLabel3 = new CalendarDayLabel();
+            calendarDayLabel2 = new CalendarDayLabel();
+            calendarDayLabel1 = new CalendarDayLabel();
             tableLayoutPanel4 = new TableLayoutPanel();
             label17 = new Label();
             label18 = new Label();
@@ -340,48 +340,48 @@
             LeftKalendarzTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.3089457F));
             LeftKalendarzTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.3089457F));
             LeftKalendarzTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.3089457F));
-            LeftKalendarzTable.Controls.Add(label52, 6, 5);
-            LeftKalendarzTable.Controls.Add(label51, 5, 5);
-            LeftKalendarzTable.Controls.Add(label50, 4, 5);
-            LeftKalendarzTable.Controls.Add(label49, 3, 5);
-            LeftKalendarzTable.Controls.Add(label48, 2, 5);
-            LeftKalendarzTable.Controls.Add(label47, 1, 5);
-            LeftKalendarzTable.Controls.Add(label46, 0, 5);
-            LeftKalendarzTable.Controls.Add(label45, 6, 4);
-            LeftKalendarzTable.Controls.Add(label44, 5, 4);
-            LeftKalendarzTable.Controls.Add(label43, 4, 4);
-            LeftKalendarzTable.Controls.Add(label42, 3, 4);
-            LeftKalendarzTable.Controls.Add(label41, 2, 4);
-            LeftKalendarzTable.Controls.Add(label40, 1, 4);
-            LeftKalendarzTable.Controls.Add(label39, 0, 4);
-            LeftKalendarzTable.Controls.Add(label38, 6, 3);
-            LeftKalendarzTable.Controls.Add(label37, 4, 3);
-            LeftKalendarzTable.Controls.Add(label36, 3, 3);
-            LeftKalendarzTable.Controls.Add(label35, 2, 3);
-            LeftKalendarzTable.Controls.Add(label34, 1, 3);
-            LeftKalendarzTable.Controls.Add(label33, 0, 3);
-            LeftKalendarzTable.Controls.Add(label32, 6, 2);
-            LeftKalendarzTable.Controls.Add(label31, 5, 2);
-            LeftKalendarzTable.Controls.Add(label30, 4, 2);
-            LeftKalendarzTable.Controls.Add(label29, 3, 2);
-            LeftKalendarzTable.Controls.Add(label28, 2, 2);
-            LeftKalendarzTable.Controls.Add(label27, 1, 2);
-            LeftKalendarzTable.Controls.Add(label26, 0, 2);
-            LeftKalendarzTable.Controls.Add(label25, 6, 1);
-            LeftKalendarzTable.Controls.Add(label24, 5, 1);
-            LeftKalendarzTable.Controls.Add(label23, 4, 1);
-            LeftKalendarzTable.Controls.Add(label22, 3, 1);
-            LeftKalendarzTable.Controls.Add(label21, 2, 1);
-            LeftKalendarzTable.Controls.Add(label20, 1, 1);
-            LeftKalendarzTable.Controls.Add(label19, 0, 1);
-            LeftKalendarzTable.Controls.Add(label15, 6, 0);
-            LeftKalendarzTable.Controls.Add(label14, 5, 0);
-            LeftKalendarzTable.Controls.Add(label13, 4, 0);
-            LeftKalendarzTable.Controls.Add(label12, 3, 0);
-            LeftKalendarzTable.Controls.Add(label11, 2, 0);
-            LeftKalendarzTable.Controls.Add(label10, 1, 0);
-            LeftKalendarzTable.Controls.Add(label16, 0, 0);
-            LeftKalendarzTable.Controls.Add(label1, 5, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel42, 6, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel41, 5, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel40, 4, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel39, 3, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel38, 2, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel37, 1, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel36, 0, 5);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel35, 6, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel34, 5, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel33, 4, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel32, 3, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel31, 2, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel30, 1, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel29, 0, 4);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel28, 6, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel27, 5, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel26, 4, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel25, 3, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel24, 2, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel23, 1, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel22, 0, 3);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel21, 6, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel20, 5, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel19, 4, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel18, 3, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel17, 2, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel16, 1, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel15, 0, 2);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel14, 6, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel13, 5, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel12, 4, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel11, 3, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel10, 2, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel9, 1, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel8, 0, 1);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel7, 6, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel6, 5, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel5, 4, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel4, 3, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel3, 2, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel2, 1, 0);
+            LeftKalendarzTable.Controls.Add(calendarDayLabel1, 0, 0);
             LeftKalendarzTable.Dock = DockStyle.Fill;
             LeftKalendarzTable.Location = new Point(4, 117);
             LeftKalendarzTable.Name = "LeftKalendarzTable";
@@ -396,474 +396,596 @@
             LeftKalendarzTable.Size = new Size(352, 260);
             LeftKalendarzTable.TabIndex = 2;
             LeftKalendarzTable.CellPaint += LeftKalendarzTable_CellPaint;
+            LeftKalendarzTable.Click += CalendarDayClick;
             LeftKalendarzTable.Paint += LeftKalendarzTable_Paint;
             // 
-            // label52
-            // 
-            label52.AutoSize = true;
-            label52.BackColor = Color.Transparent;
-            label52.Dock = DockStyle.Fill;
-            label52.ForeColor = Color.Red;
-            label52.Location = new Point(303, 215);
-            label52.Name = "label52";
-            label52.Size = new Size(46, 45);
-            label52.TabIndex = 53;
-            label52.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            label51.AutoSize = true;
-            label51.BackColor = Color.Transparent;
-            label51.Dock = DockStyle.Fill;
-            label51.Location = new Point(253, 215);
-            label51.Name = "label51";
-            label51.Size = new Size(44, 45);
-            label51.TabIndex = 52;
-            label51.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.BackColor = Color.Transparent;
-            label50.Dock = DockStyle.Fill;
-            label50.Location = new Point(203, 215);
-            label50.Name = "label50";
-            label50.Size = new Size(44, 45);
-            label50.TabIndex = 51;
-            label50.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.BackColor = Color.Transparent;
-            label49.Dock = DockStyle.Fill;
-            label49.Location = new Point(153, 215);
-            label49.Name = "label49";
-            label49.Size = new Size(44, 45);
-            label49.TabIndex = 50;
-            label49.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.BackColor = Color.Transparent;
-            label48.Dock = DockStyle.Fill;
-            label48.Location = new Point(104, 215);
-            label48.Name = "label48";
-            label48.Size = new Size(43, 45);
-            label48.TabIndex = 49;
-            label48.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.BackColor = Color.Transparent;
-            label47.Dock = DockStyle.Fill;
-            label47.Location = new Point(53, 215);
-            label47.Name = "label47";
-            label47.Size = new Size(45, 45);
-            label47.TabIndex = 48;
-            label47.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.BackColor = Color.Transparent;
-            label46.Dock = DockStyle.Fill;
-            label46.Location = new Point(3, 215);
-            label46.Name = "label46";
-            label46.Size = new Size(44, 45);
-            label46.TabIndex = 47;
-            label46.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            label45.AutoSize = true;
-            label45.BackColor = Color.Transparent;
-            label45.Dock = DockStyle.Fill;
-            label45.ForeColor = Color.Red;
-            label45.Location = new Point(303, 172);
-            label45.Name = "label45";
-            label45.Size = new Size(46, 43);
-            label45.TabIndex = 46;
-            label45.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label44
-            // 
-            label44.AutoSize = true;
-            label44.BackColor = Color.Transparent;
-            label44.Dock = DockStyle.Fill;
-            label44.Location = new Point(253, 172);
-            label44.Name = "label44";
-            label44.Size = new Size(44, 43);
-            label44.TabIndex = 45;
-            label44.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.BackColor = Color.Transparent;
-            label43.Dock = DockStyle.Fill;
-            label43.Location = new Point(203, 172);
-            label43.Name = "label43";
-            label43.Size = new Size(44, 43);
-            label43.TabIndex = 44;
-            label43.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            label42.AutoSize = true;
-            label42.BackColor = Color.Transparent;
-            label42.Dock = DockStyle.Fill;
-            label42.Location = new Point(153, 172);
-            label42.Name = "label42";
-            label42.Size = new Size(44, 43);
-            label42.TabIndex = 43;
-            label42.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            label41.AutoSize = true;
-            label41.BackColor = Color.Transparent;
-            label41.Dock = DockStyle.Fill;
-            label41.Location = new Point(104, 172);
-            label41.Name = "label41";
-            label41.Size = new Size(43, 43);
-            label41.TabIndex = 42;
-            label41.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            label40.AutoSize = true;
-            label40.BackColor = Color.Transparent;
-            label40.Dock = DockStyle.Fill;
-            label40.Location = new Point(53, 172);
-            label40.Name = "label40";
-            label40.Size = new Size(45, 43);
-            label40.TabIndex = 41;
-            label40.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            label39.AutoSize = true;
-            label39.BackColor = Color.Transparent;
-            label39.Dock = DockStyle.Fill;
-            label39.Location = new Point(3, 172);
-            label39.Name = "label39";
-            label39.Size = new Size(44, 43);
-            label39.TabIndex = 40;
-            label39.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            label38.AutoSize = true;
-            label38.BackColor = Color.Transparent;
-            label38.Dock = DockStyle.Fill;
-            label38.ForeColor = Color.Red;
-            label38.Location = new Point(303, 129);
-            label38.Name = "label38";
-            label38.Size = new Size(46, 43);
-            label38.TabIndex = 39;
-            label38.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.BackColor = Color.Transparent;
-            label37.Dock = DockStyle.Fill;
-            label37.Location = new Point(203, 129);
-            label37.Name = "label37";
-            label37.Size = new Size(44, 43);
-            label37.TabIndex = 38;
-            label37.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.BackColor = Color.Transparent;
-            label36.Dock = DockStyle.Fill;
-            label36.Location = new Point(153, 129);
-            label36.Name = "label36";
-            label36.Size = new Size(44, 43);
-            label36.TabIndex = 37;
-            label36.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.BackColor = Color.Transparent;
-            label35.Dock = DockStyle.Fill;
-            label35.Location = new Point(104, 129);
-            label35.Name = "label35";
-            label35.Size = new Size(43, 43);
-            label35.TabIndex = 36;
-            label35.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Dock = DockStyle.Fill;
-            label34.Location = new Point(53, 129);
-            label34.Name = "label34";
-            label34.Size = new Size(45, 43);
-            label34.TabIndex = 35;
-            label34.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.BackColor = Color.Transparent;
-            label33.Dock = DockStyle.Fill;
-            label33.Location = new Point(3, 129);
-            label33.Name = "label33";
-            label33.Size = new Size(44, 43);
-            label33.TabIndex = 34;
-            label33.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.BackColor = Color.Transparent;
-            label32.Dock = DockStyle.Fill;
-            label32.ForeColor = Color.Red;
-            label32.Location = new Point(303, 86);
-            label32.Name = "label32";
-            label32.Size = new Size(46, 43);
-            label32.TabIndex = 33;
-            label32.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.BackColor = Color.Transparent;
-            label31.Dock = DockStyle.Fill;
-            label31.Location = new Point(253, 86);
-            label31.Name = "label31";
-            label31.Size = new Size(44, 43);
-            label31.TabIndex = 32;
-            label31.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.BackColor = Color.Transparent;
-            label30.Dock = DockStyle.Fill;
-            label30.Location = new Point(203, 86);
-            label30.Name = "label30";
-            label30.Size = new Size(44, 43);
-            label30.TabIndex = 31;
-            label30.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.BackColor = Color.Transparent;
-            label29.Dock = DockStyle.Fill;
-            label29.Location = new Point(153, 86);
-            label29.Name = "label29";
-            label29.Size = new Size(44, 43);
-            label29.TabIndex = 30;
-            label29.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.BackColor = Color.Transparent;
-            label28.Dock = DockStyle.Fill;
-            label28.Location = new Point(104, 86);
-            label28.Name = "label28";
-            label28.Size = new Size(43, 43);
-            label28.TabIndex = 29;
-            label28.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.BackColor = Color.Transparent;
-            label27.Dock = DockStyle.Fill;
-            label27.Location = new Point(53, 86);
-            label27.Name = "label27";
-            label27.Size = new Size(45, 43);
-            label27.TabIndex = 28;
-            label27.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.Transparent;
-            label26.Dock = DockStyle.Fill;
-            label26.Location = new Point(3, 86);
-            label26.Name = "label26";
-            label26.Size = new Size(44, 43);
-            label26.TabIndex = 27;
-            label26.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.BackColor = Color.Transparent;
-            label25.Dock = DockStyle.Fill;
-            label25.ForeColor = Color.Red;
-            label25.Location = new Point(303, 43);
-            label25.Name = "label25";
-            label25.Size = new Size(46, 43);
-            label25.TabIndex = 26;
-            label25.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.BackColor = Color.Transparent;
-            label24.Dock = DockStyle.Fill;
-            label24.Location = new Point(253, 43);
-            label24.Name = "label24";
-            label24.Size = new Size(44, 43);
-            label24.TabIndex = 25;
-            label24.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.Transparent;
-            label23.Dock = DockStyle.Fill;
-            label23.Location = new Point(203, 43);
-            label23.Name = "label23";
-            label23.Size = new Size(44, 43);
-            label23.TabIndex = 24;
-            label23.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.Transparent;
-            label22.Dock = DockStyle.Fill;
-            label22.Location = new Point(153, 43);
-            label22.Name = "label22";
-            label22.Size = new Size(44, 43);
-            label22.TabIndex = 23;
-            label22.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.Transparent;
-            label21.Dock = DockStyle.Fill;
-            label21.Location = new Point(104, 43);
-            label21.Name = "label21";
-            label21.Size = new Size(43, 43);
-            label21.TabIndex = 22;
-            label21.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.BackColor = Color.Transparent;
-            label20.Dock = DockStyle.Fill;
-            label20.Location = new Point(53, 43);
-            label20.Name = "label20";
-            label20.Size = new Size(45, 43);
-            label20.TabIndex = 21;
-            label20.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.BackColor = Color.Transparent;
-            label19.Dock = DockStyle.Fill;
-            label19.Location = new Point(3, 43);
-            label19.Name = "label19";
-            label19.Size = new Size(44, 43);
-            label19.TabIndex = 20;
-            label19.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.Transparent;
-            label15.Dock = DockStyle.Fill;
-            label15.ForeColor = Color.Red;
-            label15.Location = new Point(303, 0);
-            label15.Name = "label15";
-            label15.Size = new Size(46, 43);
-            label15.TabIndex = 19;
-            label15.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Dock = DockStyle.Fill;
-            label14.Location = new Point(253, 0);
-            label14.Name = "label14";
-            label14.Size = new Size(44, 43);
-            label14.TabIndex = 18;
-            label14.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Dock = DockStyle.Fill;
-            label13.Location = new Point(203, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 43);
-            label13.TabIndex = 17;
-            label13.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Dock = DockStyle.Fill;
-            label12.Location = new Point(153, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 43);
-            label12.TabIndex = 16;
-            label12.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.Transparent;
-            label11.Dock = DockStyle.Fill;
-            label11.Location = new Point(104, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(43, 43);
-            label11.TabIndex = 15;
-            label11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.Dock = DockStyle.Fill;
-            label10.Location = new Point(53, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(45, 43);
-            label10.TabIndex = 14;
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.Transparent;
-            label16.Dock = DockStyle.Fill;
-            label16.Location = new Point(3, 0);
-            label16.Name = "label16";
-            label16.Size = new Size(44, 43);
-            label16.TabIndex = 12;
-            label16.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Dock = DockStyle.Fill;
-            label1.Location = new Point(253, 129);
-            label1.Name = "label1";
-            label1.Size = new Size(44, 43);
-            label1.TabIndex = 13;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // calendarDayLabel42
+            // 
+            calendarDayLabel42.AutoSize = true;
+            calendarDayLabel42.BackColor = Color.Transparent;
+            calendarDayLabel42.Cursor = Cursors.Hand;
+            calendarDayLabel42.Dock = DockStyle.Fill;
+            calendarDayLabel42.Location = new Point(303, 215);
+            calendarDayLabel42.Name = "calendarDayLabel42";
+            calendarDayLabel42.Size = new Size(46, 45);
+            calendarDayLabel42.TabIndex = 41;
+            calendarDayLabel42.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel42.Week = 5;
+            calendarDayLabel42.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel41
+            // 
+            calendarDayLabel41.AutoSize = true;
+            calendarDayLabel41.BackColor = Color.Transparent;
+            calendarDayLabel41.Cursor = Cursors.Hand;
+            calendarDayLabel41.Dock = DockStyle.Fill;
+            calendarDayLabel41.Location = new Point(253, 215);
+            calendarDayLabel41.Name = "calendarDayLabel41";
+            calendarDayLabel41.Size = new Size(44, 45);
+            calendarDayLabel41.TabIndex = 40;
+            calendarDayLabel41.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel41.Week = 5;
+            calendarDayLabel41.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel40
+            // 
+            calendarDayLabel40.AutoSize = true;
+            calendarDayLabel40.BackColor = Color.Transparent;
+            calendarDayLabel40.Cursor = Cursors.Hand;
+            calendarDayLabel40.Dock = DockStyle.Fill;
+            calendarDayLabel40.Location = new Point(203, 215);
+            calendarDayLabel40.Name = "calendarDayLabel40";
+            calendarDayLabel40.Size = new Size(44, 45);
+            calendarDayLabel40.TabIndex = 39;
+            calendarDayLabel40.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel40.Week = 5;
+            calendarDayLabel40.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel39
+            // 
+            calendarDayLabel39.AutoSize = true;
+            calendarDayLabel39.BackColor = Color.Transparent;
+            calendarDayLabel39.Cursor = Cursors.Hand;
+            calendarDayLabel39.Dock = DockStyle.Fill;
+            calendarDayLabel39.Location = new Point(153, 215);
+            calendarDayLabel39.Name = "calendarDayLabel39";
+            calendarDayLabel39.Size = new Size(44, 45);
+            calendarDayLabel39.TabIndex = 38;
+            calendarDayLabel39.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel39.Week = 5;
+            calendarDayLabel39.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel38
+            // 
+            calendarDayLabel38.AutoSize = true;
+            calendarDayLabel38.BackColor = Color.Transparent;
+            calendarDayLabel38.Cursor = Cursors.Hand;
+            calendarDayLabel38.Dock = DockStyle.Fill;
+            calendarDayLabel38.Location = new Point(104, 215);
+            calendarDayLabel38.Name = "calendarDayLabel38";
+            calendarDayLabel38.Size = new Size(43, 45);
+            calendarDayLabel38.TabIndex = 37;
+            calendarDayLabel38.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel38.Week = 5;
+            calendarDayLabel38.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel37
+            // 
+            calendarDayLabel37.AutoSize = true;
+            calendarDayLabel37.BackColor = Color.Transparent;
+            calendarDayLabel37.Cursor = Cursors.Hand;
+            calendarDayLabel37.Dock = DockStyle.Fill;
+            calendarDayLabel37.Location = new Point(53, 215);
+            calendarDayLabel37.Name = "calendarDayLabel37";
+            calendarDayLabel37.Size = new Size(45, 45);
+            calendarDayLabel37.TabIndex = 36;
+            calendarDayLabel37.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel37.Week = 5;
+            calendarDayLabel37.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel36
+            // 
+            calendarDayLabel36.AutoSize = true;
+            calendarDayLabel36.BackColor = Color.Transparent;
+            calendarDayLabel36.Cursor = Cursors.Hand;
+            calendarDayLabel36.Dock = DockStyle.Fill;
+            calendarDayLabel36.Location = new Point(3, 215);
+            calendarDayLabel36.Name = "calendarDayLabel36";
+            calendarDayLabel36.Size = new Size(44, 45);
+            calendarDayLabel36.TabIndex = 35;
+            calendarDayLabel36.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel36.Week = 5;
+            calendarDayLabel36.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel35
+            // 
+            calendarDayLabel35.AutoSize = true;
+            calendarDayLabel35.BackColor = Color.Transparent;
+            calendarDayLabel35.Cursor = Cursors.Hand;
+            calendarDayLabel35.Dock = DockStyle.Fill;
+            calendarDayLabel35.Location = new Point(303, 172);
+            calendarDayLabel35.Name = "calendarDayLabel35";
+            calendarDayLabel35.Size = new Size(46, 43);
+            calendarDayLabel35.TabIndex = 34;
+            calendarDayLabel35.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel35.Week = 4;
+            calendarDayLabel35.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel34
+            // 
+            calendarDayLabel34.AutoSize = true;
+            calendarDayLabel34.BackColor = Color.Transparent;
+            calendarDayLabel34.Cursor = Cursors.Hand;
+            calendarDayLabel34.Dock = DockStyle.Fill;
+            calendarDayLabel34.Location = new Point(253, 172);
+            calendarDayLabel34.Name = "calendarDayLabel34";
+            calendarDayLabel34.Size = new Size(44, 43);
+            calendarDayLabel34.TabIndex = 33;
+            calendarDayLabel34.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel34.Week = 4;
+            calendarDayLabel34.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel33
+            // 
+            calendarDayLabel33.AutoSize = true;
+            calendarDayLabel33.BackColor = Color.Transparent;
+            calendarDayLabel33.Cursor = Cursors.Hand;
+            calendarDayLabel33.Dock = DockStyle.Fill;
+            calendarDayLabel33.Location = new Point(203, 172);
+            calendarDayLabel33.Name = "calendarDayLabel33";
+            calendarDayLabel33.Size = new Size(44, 43);
+            calendarDayLabel33.TabIndex = 32;
+            calendarDayLabel33.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel33.Week = 4;
+            calendarDayLabel33.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel32
+            // 
+            calendarDayLabel32.AutoSize = true;
+            calendarDayLabel32.BackColor = Color.Transparent;
+            calendarDayLabel32.Cursor = Cursors.Hand;
+            calendarDayLabel32.Dock = DockStyle.Fill;
+            calendarDayLabel32.Location = new Point(153, 172);
+            calendarDayLabel32.Name = "calendarDayLabel32";
+            calendarDayLabel32.Size = new Size(44, 43);
+            calendarDayLabel32.TabIndex = 31;
+            calendarDayLabel32.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel32.Week = 4;
+            calendarDayLabel32.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel31
+            // 
+            calendarDayLabel31.AutoSize = true;
+            calendarDayLabel31.BackColor = Color.Transparent;
+            calendarDayLabel31.Cursor = Cursors.Hand;
+            calendarDayLabel31.Dock = DockStyle.Fill;
+            calendarDayLabel31.Location = new Point(104, 172);
+            calendarDayLabel31.Name = "calendarDayLabel31";
+            calendarDayLabel31.Size = new Size(43, 43);
+            calendarDayLabel31.TabIndex = 30;
+            calendarDayLabel31.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel31.Week = 4;
+            calendarDayLabel31.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel30
+            // 
+            calendarDayLabel30.AutoSize = true;
+            calendarDayLabel30.BackColor = Color.Transparent;
+            calendarDayLabel30.Cursor = Cursors.Hand;
+            calendarDayLabel30.Dock = DockStyle.Fill;
+            calendarDayLabel30.Location = new Point(53, 172);
+            calendarDayLabel30.Name = "calendarDayLabel30";
+            calendarDayLabel30.Size = new Size(45, 43);
+            calendarDayLabel30.TabIndex = 29;
+            calendarDayLabel30.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel30.Week = 4;
+            calendarDayLabel30.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel29
+            // 
+            calendarDayLabel29.AutoSize = true;
+            calendarDayLabel29.BackColor = Color.Transparent;
+            calendarDayLabel29.Cursor = Cursors.Hand;
+            calendarDayLabel29.Dock = DockStyle.Fill;
+            calendarDayLabel29.Location = new Point(3, 172);
+            calendarDayLabel29.Name = "calendarDayLabel29";
+            calendarDayLabel29.Size = new Size(44, 43);
+            calendarDayLabel29.TabIndex = 28;
+            calendarDayLabel29.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel29.Week = 4;
+            calendarDayLabel29.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel28
+            // 
+            calendarDayLabel28.AutoSize = true;
+            calendarDayLabel28.BackColor = Color.Transparent;
+            calendarDayLabel28.Cursor = Cursors.Hand;
+            calendarDayLabel28.Dock = DockStyle.Fill;
+            calendarDayLabel28.Location = new Point(303, 129);
+            calendarDayLabel28.Name = "calendarDayLabel28";
+            calendarDayLabel28.Size = new Size(46, 43);
+            calendarDayLabel28.TabIndex = 27;
+            calendarDayLabel28.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel28.Week = 3;
+            calendarDayLabel28.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel27
+            // 
+            calendarDayLabel27.AutoSize = true;
+            calendarDayLabel27.BackColor = Color.Transparent;
+            calendarDayLabel27.Cursor = Cursors.Hand;
+            calendarDayLabel27.Dock = DockStyle.Fill;
+            calendarDayLabel27.Location = new Point(253, 129);
+            calendarDayLabel27.Name = "calendarDayLabel27";
+            calendarDayLabel27.Size = new Size(44, 43);
+            calendarDayLabel27.TabIndex = 26;
+            calendarDayLabel27.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel27.Week = 3;
+            calendarDayLabel27.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel26
+            // 
+            calendarDayLabel26.AutoSize = true;
+            calendarDayLabel26.BackColor = Color.Transparent;
+            calendarDayLabel26.Cursor = Cursors.Hand;
+            calendarDayLabel26.Dock = DockStyle.Fill;
+            calendarDayLabel26.Location = new Point(203, 129);
+            calendarDayLabel26.Name = "calendarDayLabel26";
+            calendarDayLabel26.Size = new Size(44, 43);
+            calendarDayLabel26.TabIndex = 25;
+            calendarDayLabel26.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel26.Week = 3;
+            calendarDayLabel26.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel25
+            // 
+            calendarDayLabel25.AutoSize = true;
+            calendarDayLabel25.BackColor = Color.Transparent;
+            calendarDayLabel25.Cursor = Cursors.Hand;
+            calendarDayLabel25.Dock = DockStyle.Fill;
+            calendarDayLabel25.Location = new Point(153, 129);
+            calendarDayLabel25.Name = "calendarDayLabel25";
+            calendarDayLabel25.Size = new Size(44, 43);
+            calendarDayLabel25.TabIndex = 24;
+            calendarDayLabel25.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel25.Week = 3;
+            calendarDayLabel25.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel24
+            // 
+            calendarDayLabel24.AutoSize = true;
+            calendarDayLabel24.BackColor = Color.Transparent;
+            calendarDayLabel24.Cursor = Cursors.Hand;
+            calendarDayLabel24.Dock = DockStyle.Fill;
+            calendarDayLabel24.Location = new Point(104, 129);
+            calendarDayLabel24.Name = "calendarDayLabel24";
+            calendarDayLabel24.Size = new Size(43, 43);
+            calendarDayLabel24.TabIndex = 23;
+            calendarDayLabel24.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel24.Week = 3;
+            calendarDayLabel24.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel23
+            // 
+            calendarDayLabel23.AutoSize = true;
+            calendarDayLabel23.BackColor = Color.Transparent;
+            calendarDayLabel23.Cursor = Cursors.Hand;
+            calendarDayLabel23.Dock = DockStyle.Fill;
+            calendarDayLabel23.Location = new Point(53, 129);
+            calendarDayLabel23.Name = "calendarDayLabel23";
+            calendarDayLabel23.Size = new Size(45, 43);
+            calendarDayLabel23.TabIndex = 22;
+            calendarDayLabel23.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel23.Week = 3;
+            calendarDayLabel23.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel22
+            // 
+            calendarDayLabel22.AutoSize = true;
+            calendarDayLabel22.BackColor = Color.Transparent;
+            calendarDayLabel22.Cursor = Cursors.Hand;
+            calendarDayLabel22.Dock = DockStyle.Fill;
+            calendarDayLabel22.Location = new Point(3, 129);
+            calendarDayLabel22.Name = "calendarDayLabel22";
+            calendarDayLabel22.Size = new Size(44, 43);
+            calendarDayLabel22.TabIndex = 21;
+            calendarDayLabel22.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel22.Week = 3;
+            calendarDayLabel22.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel21
+            // 
+            calendarDayLabel21.AutoSize = true;
+            calendarDayLabel21.BackColor = Color.Transparent;
+            calendarDayLabel21.Cursor = Cursors.Hand;
+            calendarDayLabel21.Dock = DockStyle.Fill;
+            calendarDayLabel21.Location = new Point(303, 86);
+            calendarDayLabel21.Name = "calendarDayLabel21";
+            calendarDayLabel21.Size = new Size(46, 43);
+            calendarDayLabel21.TabIndex = 20;
+            calendarDayLabel21.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel21.Week = 2;
+            calendarDayLabel21.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel20
+            // 
+            calendarDayLabel20.AutoSize = true;
+            calendarDayLabel20.BackColor = Color.Transparent;
+            calendarDayLabel20.Cursor = Cursors.Hand;
+            calendarDayLabel20.Dock = DockStyle.Fill;
+            calendarDayLabel20.Location = new Point(253, 86);
+            calendarDayLabel20.Name = "calendarDayLabel20";
+            calendarDayLabel20.Size = new Size(44, 43);
+            calendarDayLabel20.TabIndex = 19;
+            calendarDayLabel20.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel20.Week = 2;
+            calendarDayLabel20.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel19
+            // 
+            calendarDayLabel19.AutoSize = true;
+            calendarDayLabel19.BackColor = Color.Transparent;
+            calendarDayLabel19.Cursor = Cursors.Hand;
+            calendarDayLabel19.Dock = DockStyle.Fill;
+            calendarDayLabel19.Location = new Point(203, 86);
+            calendarDayLabel19.Name = "calendarDayLabel19";
+            calendarDayLabel19.Size = new Size(44, 43);
+            calendarDayLabel19.TabIndex = 18;
+            calendarDayLabel19.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel19.Week = 2;
+            calendarDayLabel19.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel18
+            // 
+            calendarDayLabel18.AutoSize = true;
+            calendarDayLabel18.BackColor = Color.Transparent;
+            calendarDayLabel18.Cursor = Cursors.Hand;
+            calendarDayLabel18.Dock = DockStyle.Fill;
+            calendarDayLabel18.Location = new Point(153, 86);
+            calendarDayLabel18.Name = "calendarDayLabel18";
+            calendarDayLabel18.Size = new Size(44, 43);
+            calendarDayLabel18.TabIndex = 17;
+            calendarDayLabel18.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel18.Week = 2;
+            calendarDayLabel18.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel17
+            // 
+            calendarDayLabel17.AutoSize = true;
+            calendarDayLabel17.BackColor = Color.Transparent;
+            calendarDayLabel17.Cursor = Cursors.Hand;
+            calendarDayLabel17.Dock = DockStyle.Fill;
+            calendarDayLabel17.Location = new Point(104, 86);
+            calendarDayLabel17.Name = "calendarDayLabel17";
+            calendarDayLabel17.Size = new Size(43, 43);
+            calendarDayLabel17.TabIndex = 16;
+            calendarDayLabel17.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel17.Week = 2;
+            calendarDayLabel17.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel16
+            // 
+            calendarDayLabel16.AutoSize = true;
+            calendarDayLabel16.BackColor = Color.Transparent;
+            calendarDayLabel16.Cursor = Cursors.Hand;
+            calendarDayLabel16.Dock = DockStyle.Fill;
+            calendarDayLabel16.Location = new Point(53, 86);
+            calendarDayLabel16.Name = "calendarDayLabel16";
+            calendarDayLabel16.Size = new Size(45, 43);
+            calendarDayLabel16.TabIndex = 15;
+            calendarDayLabel16.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel16.Week = 2;
+            calendarDayLabel16.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel15
+            // 
+            calendarDayLabel15.AutoSize = true;
+            calendarDayLabel15.BackColor = Color.Transparent;
+            calendarDayLabel15.Cursor = Cursors.Hand;
+            calendarDayLabel15.Dock = DockStyle.Fill;
+            calendarDayLabel15.Location = new Point(3, 86);
+            calendarDayLabel15.Name = "calendarDayLabel15";
+            calendarDayLabel15.Size = new Size(44, 43);
+            calendarDayLabel15.TabIndex = 14;
+            calendarDayLabel15.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel15.Week = 2;
+            calendarDayLabel15.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel14
+            // 
+            calendarDayLabel14.AutoSize = true;
+            calendarDayLabel14.BackColor = Color.Transparent;
+            calendarDayLabel14.Cursor = Cursors.Hand;
+            calendarDayLabel14.Dock = DockStyle.Fill;
+            calendarDayLabel14.Location = new Point(303, 43);
+            calendarDayLabel14.Name = "calendarDayLabel14";
+            calendarDayLabel14.Size = new Size(46, 43);
+            calendarDayLabel14.TabIndex = 13;
+            calendarDayLabel14.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel14.Week = 1;
+            calendarDayLabel14.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel13
+            // 
+            calendarDayLabel13.AutoSize = true;
+            calendarDayLabel13.BackColor = Color.Transparent;
+            calendarDayLabel13.Cursor = Cursors.Hand;
+            calendarDayLabel13.Dock = DockStyle.Fill;
+            calendarDayLabel13.Location = new Point(253, 43);
+            calendarDayLabel13.Name = "calendarDayLabel13";
+            calendarDayLabel13.Size = new Size(44, 43);
+            calendarDayLabel13.TabIndex = 12;
+            calendarDayLabel13.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel13.Week = 1;
+            calendarDayLabel13.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel12
+            // 
+            calendarDayLabel12.AutoSize = true;
+            calendarDayLabel12.BackColor = Color.Transparent;
+            calendarDayLabel12.Cursor = Cursors.Hand;
+            calendarDayLabel12.Dock = DockStyle.Fill;
+            calendarDayLabel12.Location = new Point(203, 43);
+            calendarDayLabel12.Name = "calendarDayLabel12";
+            calendarDayLabel12.Size = new Size(44, 43);
+            calendarDayLabel12.TabIndex = 11;
+            calendarDayLabel12.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel12.Week = 1;
+            calendarDayLabel12.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel11
+            // 
+            calendarDayLabel11.AutoSize = true;
+            calendarDayLabel11.BackColor = Color.Transparent;
+            calendarDayLabel11.Cursor = Cursors.Hand;
+            calendarDayLabel11.Dock = DockStyle.Fill;
+            calendarDayLabel11.Location = new Point(153, 43);
+            calendarDayLabel11.Name = "calendarDayLabel11";
+            calendarDayLabel11.Size = new Size(44, 43);
+            calendarDayLabel11.TabIndex = 10;
+            calendarDayLabel11.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel11.Week = 1;
+            calendarDayLabel11.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel10
+            // 
+            calendarDayLabel10.AutoSize = true;
+            calendarDayLabel10.BackColor = Color.Transparent;
+            calendarDayLabel10.Cursor = Cursors.Hand;
+            calendarDayLabel10.Dock = DockStyle.Fill;
+            calendarDayLabel10.Location = new Point(104, 43);
+            calendarDayLabel10.Name = "calendarDayLabel10";
+            calendarDayLabel10.Size = new Size(43, 43);
+            calendarDayLabel10.TabIndex = 9;
+            calendarDayLabel10.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel10.Week = 1;
+            calendarDayLabel10.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel9
+            // 
+            calendarDayLabel9.AutoSize = true;
+            calendarDayLabel9.BackColor = Color.Transparent;
+            calendarDayLabel9.Cursor = Cursors.Hand;
+            calendarDayLabel9.Dock = DockStyle.Fill;
+            calendarDayLabel9.Location = new Point(53, 43);
+            calendarDayLabel9.Name = "calendarDayLabel9";
+            calendarDayLabel9.Size = new Size(45, 43);
+            calendarDayLabel9.TabIndex = 8;
+            calendarDayLabel9.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel9.Week = 1;
+            calendarDayLabel9.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel8
+            // 
+            calendarDayLabel8.AutoSize = true;
+            calendarDayLabel8.BackColor = Color.Transparent;
+            calendarDayLabel8.Cursor = Cursors.Hand;
+            calendarDayLabel8.Dock = DockStyle.Fill;
+            calendarDayLabel8.Location = new Point(3, 43);
+            calendarDayLabel8.Name = "calendarDayLabel8";
+            calendarDayLabel8.Size = new Size(44, 43);
+            calendarDayLabel8.TabIndex = 7;
+            calendarDayLabel8.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel8.Week = 1;
+            calendarDayLabel8.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel7
+            // 
+            calendarDayLabel7.AutoSize = true;
+            calendarDayLabel7.BackColor = Color.Transparent;
+            calendarDayLabel7.Cursor = Cursors.Hand;
+            calendarDayLabel7.Dock = DockStyle.Fill;
+            calendarDayLabel7.Location = new Point(303, 0);
+            calendarDayLabel7.Name = "calendarDayLabel7";
+            calendarDayLabel7.Size = new Size(46, 43);
+            calendarDayLabel7.TabIndex = 6;
+            calendarDayLabel7.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel7.Week = 0;
+            calendarDayLabel7.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel6
+            // 
+            calendarDayLabel6.AutoSize = true;
+            calendarDayLabel6.BackColor = Color.Transparent;
+            calendarDayLabel6.Cursor = Cursors.Hand;
+            calendarDayLabel6.Dock = DockStyle.Fill;
+            calendarDayLabel6.Location = new Point(253, 0);
+            calendarDayLabel6.Name = "calendarDayLabel6";
+            calendarDayLabel6.Size = new Size(44, 43);
+            calendarDayLabel6.TabIndex = 5;
+            calendarDayLabel6.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel6.Week = 0;
+            calendarDayLabel6.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel5
+            // 
+            calendarDayLabel5.AutoSize = true;
+            calendarDayLabel5.BackColor = Color.Transparent;
+            calendarDayLabel5.Cursor = Cursors.Hand;
+            calendarDayLabel5.Dock = DockStyle.Fill;
+            calendarDayLabel5.Location = new Point(203, 0);
+            calendarDayLabel5.Name = "calendarDayLabel5";
+            calendarDayLabel5.Size = new Size(44, 43);
+            calendarDayLabel5.TabIndex = 4;
+            calendarDayLabel5.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel5.Week = 0;
+            calendarDayLabel5.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel4
+            // 
+            calendarDayLabel4.AutoSize = true;
+            calendarDayLabel4.BackColor = Color.Transparent;
+            calendarDayLabel4.Cursor = Cursors.Hand;
+            calendarDayLabel4.Dock = DockStyle.Fill;
+            calendarDayLabel4.Location = new Point(153, 0);
+            calendarDayLabel4.Name = "calendarDayLabel4";
+            calendarDayLabel4.Size = new Size(44, 43);
+            calendarDayLabel4.TabIndex = 3;
+            calendarDayLabel4.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel4.Week = 0;
+            calendarDayLabel4.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel3
+            // 
+            calendarDayLabel3.AutoSize = true;
+            calendarDayLabel3.BackColor = Color.Transparent;
+            calendarDayLabel3.Cursor = Cursors.Hand;
+            calendarDayLabel3.Dock = DockStyle.Fill;
+            calendarDayLabel3.Location = new Point(104, 0);
+            calendarDayLabel3.Name = "calendarDayLabel3";
+            calendarDayLabel3.Size = new Size(43, 43);
+            calendarDayLabel3.TabIndex = 2;
+            calendarDayLabel3.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel3.Week = 0;
+            calendarDayLabel3.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel2
+            // 
+            calendarDayLabel2.AutoSize = true;
+            calendarDayLabel2.BackColor = Color.Transparent;
+            calendarDayLabel2.Cursor = Cursors.Hand;
+            calendarDayLabel2.Dock = DockStyle.Fill;
+            calendarDayLabel2.Location = new Point(53, 0);
+            calendarDayLabel2.Name = "calendarDayLabel2";
+            calendarDayLabel2.Size = new Size(45, 43);
+            calendarDayLabel2.TabIndex = 1;
+            calendarDayLabel2.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel2.Week = 0;
+            calendarDayLabel2.Click += CalendarDayClick;
+            // 
+            // calendarDayLabel1
+            // 
+            calendarDayLabel1.AutoSize = true;
+            calendarDayLabel1.BackColor = Color.Transparent;
+            calendarDayLabel1.Cursor = Cursors.Hand;
+            calendarDayLabel1.Dock = DockStyle.Fill;
+            calendarDayLabel1.Location = new Point(3, 0);
+            calendarDayLabel1.Name = "calendarDayLabel1";
+            calendarDayLabel1.Size = new Size(44, 43);
+            calendarDayLabel1.TabIndex = 0;
+            calendarDayLabel1.TextAlign = ContentAlignment.MiddleCenter;
+            calendarDayLabel1.Week = 0;
+            calendarDayLabel1.Click += CalendarDayClick;
             // 
             // tableLayoutPanel4
             // 
@@ -959,51 +1081,51 @@
         private Label LeftMiesiacRokLabel;
         private Button LeftCalendarNextMonth;
         private Button LeftCalendarPreviousMonth;
-        private TableLayoutPanel LeftKalendarzTable;
-        private Label label52;
-        private Label label51;
-        private Label label50;
-        private Label label49;
-        private Label label48;
-        private Label label47;
-        private Label label46;
-        private Label label45;
-        private Label label44;
-        private Label label43;
-        private Label label42;
-        private Label label41;
-        private Label label40;
-        private Label label39;
-        private Label label38;
-        private Label label37;
-        private Label label36;
-        private Label label35;
-        private Label label34;
-        private Label label33;
-        private Label label32;
-        private Label label31;
-        private Label label30;
-        private Label label29;
-        private Label label28;
-        private Label label27;
-        private Label label26;
-        private Label label25;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private Label label21;
-        private Label label20;
-        private Label label19;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label16;
-        private Label label1;
         private TableLayoutPanel tableLayoutPanel4;
         private Label label17;
         private Label label18;
+        private TableLayoutPanel LeftKalendarzTable;
+        private CalendarDayLabel calendarDayLabel42;
+        private CalendarDayLabel calendarDayLabel41;
+        private CalendarDayLabel calendarDayLabel40;
+        private CalendarDayLabel calendarDayLabel39;
+        private CalendarDayLabel calendarDayLabel38;
+        private CalendarDayLabel calendarDayLabel37;
+        private CalendarDayLabel calendarDayLabel36;
+        private CalendarDayLabel calendarDayLabel35;
+        private CalendarDayLabel calendarDayLabel34;
+        private CalendarDayLabel calendarDayLabel33;
+        private CalendarDayLabel calendarDayLabel32;
+        private CalendarDayLabel calendarDayLabel31;
+        private CalendarDayLabel calendarDayLabel30;
+        private CalendarDayLabel calendarDayLabel29;
+        private CalendarDayLabel calendarDayLabel28;
+        private CalendarDayLabel calendarDayLabel27;
+        private CalendarDayLabel calendarDayLabel26;
+        private CalendarDayLabel calendarDayLabel25;
+        private CalendarDayLabel calendarDayLabel24;
+        private CalendarDayLabel calendarDayLabel23;
+        private CalendarDayLabel calendarDayLabel22;
+        private CalendarDayLabel calendarDayLabel21;
+        private CalendarDayLabel calendarDayLabel20;
+        private CalendarDayLabel calendarDayLabel19;
+        private CalendarDayLabel calendarDayLabel18;
+        private CalendarDayLabel calendarDayLabel17;
+        private CalendarDayLabel calendarDayLabel16;
+        private CalendarDayLabel calendarDayLabel15;
+        private CalendarDayLabel calendarDayLabel14;
+        private CalendarDayLabel calendarDayLabel13;
+        private CalendarDayLabel calendarDayLabel12;
+        private CalendarDayLabel calendarDayLabel11;
+        private CalendarDayLabel calendarDayLabel10;
+        private CalendarDayLabel calendarDayLabel9;
+        private CalendarDayLabel calendarDayLabel8;
+        private CalendarDayLabel calendarDayLabel7;
+        private CalendarDayLabel calendarDayLabel6;
+        private CalendarDayLabel calendarDayLabel5;
+        private CalendarDayLabel calendarDayLabel4;
+        private CalendarDayLabel calendarDayLabel3;
+        private CalendarDayLabel calendarDayLabel2;
+        private CalendarDayLabel calendarDayLabel1;
     }
 }
