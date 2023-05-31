@@ -1,73 +1,138 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Kuziemski_Zalewski_LAB08_09PZ_BK
 {
-    public class Kalendarz: List<Wydarzenie>
+    public class KalendarzService
     {
-        //public String LoginBD { get;set;}
-        //public String PasswordBD { get;set;}
-        //public String UrlDB {get;set;}
 
-        public void AddWydarznie(Wydarzenie w)
+        public void AddWydarznie(Wydarzenie w) //OK
         {
-            if (this.All(p => p.Nazwa != w.Nazwa))
+            if (w.Poczatek > w.Koniec)
             {
-                this.Add(w);
+                throw new KoniecPrzedPoczatkiemException();
             }
-
-            else 
+            else
             {
-                throw new NazwaZajętaException();
+                using (var db = new DatabaseContext())
+                {
+                    db.Database.EnsureCreated();
+                    if (db.Wydarzenia.All(p => p.Nazwa != w.Nazwa))
+                    {
+                        db.Wydarzenia.Add(w);
+                        db.SaveChanges();
+
+                        foreach (var p in db.Wydarzenia)
+                        {
+                            Console.WriteLine(p.ToString());
+                        }
+                    }
+                    else
+                    {
+                        throw new NazwaZajętaException();
+                    }
+                }
             }
         }
 
-        public Boolean CzyDzieńZajęty(DateOnly dzień)
+        public Boolean CzyDzieńZajęty(DateOnly dzień) //OK
         {
-            return this.Any(p => p.CzywDniu(dzień));
+            using (var db = new DatabaseContext())
+            {
+                return db.Wydarzenia.Any(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
+                 && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)));
+            }
         }
 
-        public int LiczbaWydarzeńDnia(DateOnly dzień)
+        public int LiczbaWydarzeńDnia(DateOnly dzień) //OK
         {
-            return this.Count(p => p.CzywDniu(dzień));
+            using (var db = new DatabaseContext())
+            {
+                return db.Wydarzenia.Count(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
+                && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)));
+            }
         }
 
-        public void DeleteWydarzenie(Wydarzenie w) 
+        public void DeleteAll() //OK
         {
-        this.Remove(w);
+            using (var db = new DatabaseContext())
+            {
+                db.RemoveRange(db.Wydarzenia.Where(p => true));
+                db.SaveChanges();
+            }
         }
 
-        public void DeleteWydarzeniePoNazwie(String nazwa)
+        public void DeleteWydarzeniePoId(int id) //OK
         {
-            this.RemoveAll(w=>w.Nazwa==nazwa);
+            using (var db = new DatabaseContext())
+            {
+                db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(p => p.WydarzenieId==id));
+                db.SaveChanges();
+            }
         }
 
-        public void DeleteWydarzeniaPoDniu(DateOnly dzień)
+        public void DeleteWydarzeniePoNazwie(String nazwa) //OK
         {
-            this.RemoveAll(w => w.CzywDniu(dzień));
+            using (var db = new DatabaseContext())
+            {
+                db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(p => p.Nazwa.Equals(nazwa)));
+                db.SaveChanges();
+            }
         }
 
-        public int LiczbaWydarzeń()
+        public void DeleteWydarzeniaPoDniu(DateOnly dzień) //OK
         {
-            return this.Count();
+            using (var db = new DatabaseContext())
+            {
+                db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
+                && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59))));
+                db.SaveChanges();
+            }
         }
 
-        public Wydarzenie ZnajdżWydarzeniePoNazwie(String nazwa)
+        public int LiczbaWydarzeń //OK
         {
-            return this.Where(w => w.Nazwa.Equals(nazwa)).First();
+            get
+            {
+                using (var db = new DatabaseContext())
+                {
+                    return db.Wydarzenia.Count();
+                }
+            }
         }
 
-        public Wydarzenie NajblizszeWydarzenie(DateTime teraz)
+        public Wydarzenie ZnajdżWydarzeniePoNazwie(String nazwa) //OK
         {
-            return this.OrderBy(w => w.IlePozostało(teraz)).First();
+            using (var db = new DatabaseContext())
+            {
+                return db.Wydarzenia.Where(w => w.Nazwa.Equals(nazwa)).First();
+            }
         }
 
-        public List<Wydarzenie> ZnajdżWydarzeniaDnia(DateOnly dzień)
+        public Wydarzenie NajblizszeWydarzenie //OK
+        {
+            get
+            {
+                using (var db = new DatabaseContext())
+                {
+                    DateTime teraz = DateTime.Now;
+                    return db.Wydarzenia.Where(w=>w.Koniec.CompareTo(teraz)>0).OrderBy(w => w.Poczatek).First();
+                }
+            }
+        }
+
+        public List<Wydarzenie> ZnajdżWydarzeniaDnia(DateOnly dzień) //OK
         { 
-        return this.Where(w=>w.CzywDniu(dzień)).ToList();
+            using (var db = new DatabaseContext())
+            {
+                return db.Wydarzenia.Where(w => w.Poczatek>=dzień.ToDateTime(new TimeOnly(0,0))
+                && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)))
+                .ToList();
+            }
         }
     }
 }
