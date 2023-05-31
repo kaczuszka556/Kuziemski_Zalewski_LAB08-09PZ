@@ -1,7 +1,7 @@
 using Kuziemski_Zalewski_LAB08_09PZ_BK;
 using System.Diagnostics;
 using System.Net;
-
+using System.Threading.Tasks;
 namespace GUI
 {
     public partial class Main : Form
@@ -65,7 +65,7 @@ namespace GUI
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
                     if (control != null && control is CalendarDayLabel label)
                     {
-                        
+
                         if (licznikDzien > dni)
                         {
                             label.Day = licznikPoza;
@@ -125,10 +125,10 @@ namespace GUI
                 {
                     HighlightedRow = cal.Week;
                 }
-                
+
 
             }
-                
+
             LeftKalendarzTable.Invalidate();
             UpdateEventCalendarDayLabels();
 
@@ -220,5 +220,66 @@ namespace GUI
     public class EventCalendarDayLabel : Label
     {
 
+    }
+
+    public class Zegar : Panel, IDisposable
+    {
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
+        public Zegar()
+        {
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(OnTick);
+            timer.Start();
+        }
+
+        private void OnTick(object sender, EventArgs e)
+        {
+            //get current time
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
+            int ss = DateTime.Now.Second;
+
+            //time
+            string time = "";
+
+            //padding leading zero
+            if (hh < 10)
+            {
+                time += "0" + hh;
+            }
+            else
+            {
+                time += hh;
+            }
+            time += ":";
+
+            if (mm < 10)
+            {
+                time += "0" + mm;
+            }
+            else
+            {
+                time += mm;
+            }
+            time += ":";
+
+            if (ss < 10)
+            {
+                time += "0" + ss;
+            }
+            else
+            {
+                time += ss;
+            }
+
+            //update label
+            this.Text = time;
+        }
+
+        public void Dispose()
+        {
+            timer.Dispose();
+        }
     }
 }
