@@ -8,15 +8,28 @@ namespace GUI
     {
         private DateTime CurrentDate = DateTime.Now;
         private int HighlightedRow = 0;
-        private int[,] CalendarBackColors = new int[6, 6];
+        private EventCalendarDayLabel[] EventCalendarDayLabels;
 
         public Main()
         {
             InitializeComponent();
             this.Text = "Kalendarz";
-            HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) -1;
+            HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
-            //HighlightCurrentWeek();
+
+            EventCalendarDayLabels = new EventCalendarDayLabel[]
+            {
+                EventCalendarDay1,
+                EventCalendarDay2,
+                EventCalendarDay3,
+                EventCalendarDay4,
+                EventCalendarDay5,
+                EventCalendarDay6,
+                EventCalendarDay7,
+            };
+
+            UpdateEventCalendarDayLabels();
+
 
         }
 
@@ -27,7 +40,7 @@ namespace GUI
             int pierwszyDzien = Narzêdziowa.PierwszyDzieñ(miesiac, rok) == 0 ? 6 : Narzêdziowa.PierwszyDzieñ(miesiac, rok) - 1;
             int dni = Narzêdziowa.DniWMiesiacu(miesiac, rok);
             int licznikDzien = 0;
-            int licznikPrzed = CurrentDate.Month == 0 ? Narzêdziowa.DniWMiesiacu(12, CurrentDate.Year - 1) : Narzêdziowa.DniWMiesiacu(CurrentDate.Month-1, CurrentDate.Year);
+            int licznikPrzed = CurrentDate.Month == 0 ? Narzêdziowa.DniWMiesiacu(12, CurrentDate.Year - 1) : Narzêdziowa.DniWMiesiacu(CurrentDate.Month - 1, CurrentDate.Year);
             int licznikPoza = 0;
             ClearCalendar();
 
@@ -59,10 +72,10 @@ namespace GUI
                             label.Text = (++licznikDzien).ToString();
                             label.ForeColor = Color.Black;
                         }
-                        
+
                     }
-                    
-                    
+
+
                 }
 
                 pierwszyDzien = 0;
@@ -74,6 +87,8 @@ namespace GUI
             if (sender is CalendarDayLabel cal)
                 HighlightedRow = cal.Week;
             LeftKalendarzTable.Invalidate();
+            UpdateEventCalendarDayLabels();
+
 
         }
 
@@ -87,6 +102,17 @@ namespace GUI
             if (HighlightedRow == e.Row)
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.White), e.CellBounds);
+            }
+        }
+
+        private void UpdateEventCalendarDayLabels()
+        {
+            DateOnly[] daysInWeek = Narzêdziowa.WszystkieDniWtygodniuPoNumerze(HighlightedRow + 1, CurrentDate.Month, CurrentDate.Year);
+
+            for (int i = 0; i < daysInWeek.Length; i++)
+            {
+                EventCalendarDayLabels[i].Text = daysInWeek[i].ToString();
+
             }
         }
 
@@ -111,12 +137,15 @@ namespace GUI
         {
             CurrentDate = CurrentDate.AddMonths(1);
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
+            UpdateEventCalendarDayLabels();
         }
 
         private void LeftCalendarPreviousMonth_Click(object sender, EventArgs e)
         {
             CurrentDate = CurrentDate.AddMonths(-1);
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
+            UpdateEventCalendarDayLabels();
+
         }
 
     }
@@ -134,6 +163,11 @@ namespace GUI
     public class CalendarDayLabel : Label
     {
         public int Week { get; set; }
+
+    }
+
+    public class EventCalendarDayLabel : Label
+    {
 
     }
 }

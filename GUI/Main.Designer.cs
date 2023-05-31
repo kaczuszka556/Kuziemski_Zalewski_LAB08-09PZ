@@ -32,9 +32,14 @@
             plikToolStripMenuItem = new ToolStripMenuItem();
             opcjeToolStripMenuItem = new ToolStripMenuItem();
             wyjdźToolStripMenuItem = new ToolStripMenuItem();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel3 = new Panel();
-            label2 = new Label();
+            EventCalendar = new TableLayoutPanel();
+            EventCalendarDay7 = new EventCalendarDayLabel();
+            EventCalendarDay6 = new EventCalendarDayLabel();
+            EventCalendarDay5 = new EventCalendarDayLabel();
+            EventCalendarDay4 = new EventCalendarDayLabel();
+            EventCalendarDay3 = new EventCalendarDayLabel();
+            EventCalendarDay2 = new EventCalendarDayLabel();
+            EventCalendarDay1 = new EventCalendarDayLabel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
             LeftMiesiacRokLabel = new Label();
@@ -95,8 +100,7 @@
             label17 = new Label();
             label18 = new Label();
             menuStrip1.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            panel3.SuspendLayout();
+            EventCalendar.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -133,42 +137,101 @@
             wyjdźToolStripMenuItem.Size = new Size(133, 26);
             wyjdźToolStripMenuItem.Text = "Wyjdź";
             // 
-            // tableLayoutPanel1
+            // EventCalendar
             // 
-            tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857113F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.Controls.Add(panel3, 0, 0);
-            tableLayoutPanel1.Location = new Point(390, 31);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1145, 722);
-            tableLayoutPanel1.TabIndex = 2;
+            EventCalendar.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            EventCalendar.ColumnCount = 7;
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857113F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            EventCalendar.Controls.Add(EventCalendarDay7, 6, 0);
+            EventCalendar.Controls.Add(EventCalendarDay6, 5, 0);
+            EventCalendar.Controls.Add(EventCalendarDay5, 4, 0);
+            EventCalendar.Controls.Add(EventCalendarDay4, 3, 0);
+            EventCalendar.Controls.Add(EventCalendarDay3, 2, 0);
+            EventCalendar.Controls.Add(EventCalendarDay2, 1, 0);
+            EventCalendar.Controls.Add(EventCalendarDay1, 0, 0);
+            EventCalendar.Location = new Point(390, 31);
+            EventCalendar.Name = "EventCalendar";
+            EventCalendar.RowCount = 2;
+            EventCalendar.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            EventCalendar.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+            EventCalendar.Size = new Size(1145, 722);
+            EventCalendar.TabIndex = 2;
             // 
-            // panel3
+            // EventCalendarDay7
             // 
-            panel3.Controls.Add(label2);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(4, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(156, 714);
-            panel3.TabIndex = 0;
+            EventCalendarDay7.AutoSize = true;
+            EventCalendarDay7.Dock = DockStyle.Fill;
+            EventCalendarDay7.Location = new Point(982, 1);
+            EventCalendarDay7.Name = "EventCalendarDay7";
+            EventCalendarDay7.Size = new Size(159, 143);
+            EventCalendarDay7.TabIndex = 6;
+            EventCalendarDay7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // EventCalendarDay6
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(51, 306);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Dzien 1 itp";
+            EventCalendarDay6.AutoSize = true;
+            EventCalendarDay6.Dock = DockStyle.Fill;
+            EventCalendarDay6.Location = new Point(819, 1);
+            EventCalendarDay6.Name = "EventCalendarDay6";
+            EventCalendarDay6.Size = new Size(156, 143);
+            EventCalendarDay6.TabIndex = 5;
+            EventCalendarDay6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // EventCalendarDay5
+            // 
+            EventCalendarDay5.AutoSize = true;
+            EventCalendarDay5.Dock = DockStyle.Fill;
+            EventCalendarDay5.Location = new Point(656, 1);
+            EventCalendarDay5.Name = "EventCalendarDay5";
+            EventCalendarDay5.Size = new Size(156, 143);
+            EventCalendarDay5.TabIndex = 4;
+            EventCalendarDay5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // EventCalendarDay4
+            // 
+            EventCalendarDay4.AutoSize = true;
+            EventCalendarDay4.Dock = DockStyle.Fill;
+            EventCalendarDay4.Location = new Point(493, 1);
+            EventCalendarDay4.Name = "EventCalendarDay4";
+            EventCalendarDay4.Size = new Size(156, 143);
+            EventCalendarDay4.TabIndex = 3;
+            EventCalendarDay4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // EventCalendarDay3
+            // 
+            EventCalendarDay3.AutoSize = true;
+            EventCalendarDay3.Dock = DockStyle.Fill;
+            EventCalendarDay3.Location = new Point(330, 1);
+            EventCalendarDay3.Name = "EventCalendarDay3";
+            EventCalendarDay3.Size = new Size(156, 143);
+            EventCalendarDay3.TabIndex = 2;
+            EventCalendarDay3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // EventCalendarDay2
+            // 
+            EventCalendarDay2.AutoSize = true;
+            EventCalendarDay2.Dock = DockStyle.Fill;
+            EventCalendarDay2.Location = new Point(167, 1);
+            EventCalendarDay2.Name = "EventCalendarDay2";
+            EventCalendarDay2.Size = new Size(156, 143);
+            EventCalendarDay2.TabIndex = 1;
+            EventCalendarDay2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // EventCalendarDay1
+            // 
+            EventCalendarDay1.AutoSize = true;
+            EventCalendarDay1.Dock = DockStyle.Fill;
+            EventCalendarDay1.Location = new Point(4, 1);
+            EventCalendarDay1.Name = "EventCalendarDay1";
+            EventCalendarDay1.Size = new Size(156, 143);
+            EventCalendarDay1.TabIndex = 0;
+            EventCalendarDay1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -1036,16 +1099,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1547, 765);
             Controls.Add(tableLayoutPanel2);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(EventCalendar);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Main";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            EventCalendar.ResumeLayout(false);
+            EventCalendar.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -1065,9 +1127,7 @@
         private ToolStripMenuItem plikToolStripMenuItem;
         private ToolStripMenuItem opcjeToolStripMenuItem;
         private ToolStripMenuItem wyjdźToolStripMenuItem;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel3;
-        private Label label2;
+        private TableLayoutPanel EventCalendar;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private Label label3;
@@ -1127,5 +1187,12 @@
         private CalendarDayLabel calendarDayLabel3;
         private CalendarDayLabel calendarDayLabel2;
         private CalendarDayLabel calendarDayLabel1;
+        private EventCalendarDayLabel EventCalendarDay7;
+        private EventCalendarDayLabel EventCalendarDay6;
+        private EventCalendarDayLabel EventCalendarDay5;
+        private EventCalendarDayLabel EventCalendarDay4;
+        private EventCalendarDayLabel EventCalendarDay3;
+        private EventCalendarDayLabel EventCalendarDay2;
+        private EventCalendarDayLabel EventCalendarDay1;
     }
 }
