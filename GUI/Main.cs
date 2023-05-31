@@ -39,18 +39,21 @@ namespace GUI
 
             int pierwszyDzien = Narzêdziowa.PierwszyDzieñ(miesiac, rok) == 0 ? 6 : Narzêdziowa.PierwszyDzieñ(miesiac, rok) - 1;
             int dni = Narzêdziowa.DniWMiesiacu(miesiac, rok);
-            int licznikDzien = 0;
-            int licznikPrzed = CurrentDate.Month == 0 ? Narzêdziowa.DniWMiesiacu(12, CurrentDate.Year - 1) : Narzêdziowa.DniWMiesiacu(CurrentDate.Month - 1, CurrentDate.Year);
-            int licznikPoza = 0;
+            int licznikDzien = 1;
+            int licznikPrzed = CurrentDate.Month == 1 ? Narzêdziowa.DniWMiesiacu(12, CurrentDate.Year - 1) : Narzêdziowa.DniWMiesiacu(CurrentDate.Month - 1, CurrentDate.Year);
+            int licznikPoza = 1;
             ClearCalendar();
 
             for (int column = pierwszyDzien - 1; column >= 0; column--)
             {
                 Control control = LeftKalendarzTable.GetControlFromPosition(column, 0);
-                if (control != null && control is Label label)
+                if (control != null && control is CalendarDayLabel label)
                 {
-                    label.Text = (licznikPrzed--).ToString();
+                    label.Day = licznikPrzed;
+                    label.PreviousMonth = true;
+                    label.Text = (licznikPrzed).ToString();
                     label.ForeColor = Color.Gray;
+                    licznikPrzed--;
                 }
             }
 
@@ -60,17 +63,23 @@ namespace GUI
                 for (int column = pierwszyDzien; column < LeftKalendarzTable.ColumnCount; column++)
                 {
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
-                    if (control != null && control is Label label)
+                    if (control != null && control is CalendarDayLabel label)
                     {
-                        if (licznikDzien == dni)
+                        
+                        if (licznikDzien > dni)
                         {
-                            label.Text = (++licznikPoza).ToString();
+                            label.Day = licznikPoza;
+                            label.NextMonth = true;
+                            label.Text = (licznikPoza).ToString();
                             label.ForeColor = Color.Gray;
+                            licznikPoza++;
                         }
                         else
                         {
-                            label.Text = (++licznikDzien).ToString();
+                            label.Day = licznikDzien;
+                            label.Text = (licznikDzien).ToString();
                             label.ForeColor = Color.Black;
+                            licznikDzien++;
                         }
 
                     }
@@ -85,7 +94,41 @@ namespace GUI
         private void CalendarDayClick(object sender, EventArgs e)
         {
             if (sender is CalendarDayLabel cal)
-                HighlightedRow = cal.Week;
+            {
+                if (cal.NextMonth)
+                {
+                    HighlightedRow = Narzêdziowa.KtóryTydzieñ(
+                        new DateOnly(
+                            CurrentDate.Month == 12 ? CurrentDate.Year + 1 : CurrentDate.Year,
+                            CurrentDate.Month == 12 ? 1 : CurrentDate.Month + 1,
+                            cal.Day)
+                        ) - 1;
+
+                    ChangeCalendarMonth(1);
+
+                }
+                else if (cal.PreviousMonth)
+                {
+                    HighlightedRow = Narzêdziowa.KtóryTydzieñ(
+                        new DateOnly(
+                            CurrentDate.Month == 1 ? CurrentDate.Year - 1 : CurrentDate.Year,
+                            CurrentDate.Month == 1 ? 12 : CurrentDate.Month - 1,
+                            cal.Day)
+                        ) - 1;
+
+                    if (HighlightedRow < 0)
+                        HighlightedRow = 5;
+                    ChangeCalendarMonth(-1);
+
+                }
+                else
+                {
+                    HighlightedRow = cal.Week;
+                }
+                
+
+            }
+                
             LeftKalendarzTable.Invalidate();
             UpdateEventCalendarDayLabels();
 
@@ -124,8 +167,10 @@ namespace GUI
                 for (int column = 0; column < LeftKalendarzTable.ColumnCount; column++)
                 {
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
-                    if (control != null && control is Label label)
+                    if (control != null && control is CalendarDayLabel label)
                     {
+                        label.PreviousMonth = false;
+                        label.NextMonth = false;
                         label.Text = "";
                     }
                 }
@@ -133,19 +178,21 @@ namespace GUI
             }
         }
 
-        private void LeftCalendarNextMonth_Click(object sender, EventArgs e)
+        private void ChangeCalendarMonth(int numberOfMonths)
         {
-            CurrentDate = CurrentDate.AddMonths(1);
+            CurrentDate = CurrentDate.AddMonths(numberOfMonths);
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
             UpdateEventCalendarDayLabels();
         }
 
+        private void LeftCalendarNextMonth_Click(object sender, EventArgs e)
+        {
+            ChangeCalendarMonth(1);
+        }
+
         private void LeftCalendarPreviousMonth_Click(object sender, EventArgs e)
         {
-            CurrentDate = CurrentDate.AddMonths(-1);
-            LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
-            UpdateEventCalendarDayLabels();
-
+            ChangeCalendarMonth(-1);
         }
 
     }
@@ -163,6 +210,10 @@ namespace GUI
     public class CalendarDayLabel : Label
     {
         public int Week { get; set; }
+        public bool PreviousMonth { get; set; }
+        public bool NextMonth { get; set; }
+
+        public int Day { get; set; }
 
     }
 
