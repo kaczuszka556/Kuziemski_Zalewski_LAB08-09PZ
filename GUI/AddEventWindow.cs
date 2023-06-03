@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,18 @@ namespace GUI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(EventNameInput.Text) || string.IsNullOrWhiteSpace(EventDescriptionInput.Text)){
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Succesfully added!.", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            KalendarzService kalendarzService = new KalendarzService();
+
+            kalendarzService.AddWydarznie(new Wydarzenie(EventNameInput.Text, EventDescriptionInput.Text, DateTime.Now, DateTime.Now.AddMinutes(120)));
+
             this.Close();
         }
     }

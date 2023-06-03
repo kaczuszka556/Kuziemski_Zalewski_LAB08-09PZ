@@ -31,7 +31,7 @@
             EventNameLabel = new Label();
             EventNameInput = new TextBox();
             EventDescritpionLabel = new Label();
-            EventDesriptionInput = new TextBox();
+            EventDescriptionInput = new TextBox();
             AddButton = new Button();
             SuspendLayout();
             // 
@@ -60,13 +60,13 @@
             EventDescritpionLabel.TabIndex = 2;
             EventDescritpionLabel.Text = "Event description:";
             // 
-            // EventDesriptionInput
+            // EventDescriptionInput
             // 
-            EventDesriptionInput.Location = new Point(12, 85);
-            EventDesriptionInput.Multiline = true;
-            EventDesriptionInput.Name = "EventDesriptionInput";
-            EventDesriptionInput.Size = new Size(576, 182);
-            EventDesriptionInput.TabIndex = 3;
+            EventDescriptionInput.Location = new Point(12, 85);
+            EventDescriptionInput.Multiline = true;
+            EventDescriptionInput.Name = "EventDescriptionInput";
+            EventDescriptionInput.Size = new Size(576, 182);
+            EventDescriptionInput.TabIndex = 3;
             // 
             // AddButton
             // 
@@ -84,7 +84,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 372);
             Controls.Add(AddButton);
-            Controls.Add(EventDesriptionInput);
+            Controls.Add(EventDescriptionInput);
             Controls.Add(EventDescritpionLabel);
             Controls.Add(EventNameInput);
             Controls.Add(EventNameLabel);
@@ -99,7 +99,7 @@
         private Label EventNameLabel;
         private TextBox EventNameInput;
         private Label EventDescritpionLabel;
-        private TextBox EventDesriptionInput;
+        private TextBox EventDescriptionInput;
         private Button AddButton;
     }
 }
