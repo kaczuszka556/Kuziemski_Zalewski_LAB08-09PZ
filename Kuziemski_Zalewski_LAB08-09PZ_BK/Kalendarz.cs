@@ -43,6 +43,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 return db.Wydarzenia.Any(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
                  && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)));
             }
@@ -52,6 +53,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 return db.Wydarzenia.Count(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
                 && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)));
             }
@@ -61,6 +63,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 db.RemoveRange(db.Wydarzenia.Where(p => true));
                 db.SaveChanges();
             }
@@ -70,6 +73,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(p => p.WydarzenieId==id));
                 db.SaveChanges();
             }
@@ -79,6 +83,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(p => p.Nazwa.Equals(nazwa)));
                 db.SaveChanges();
             }
@@ -88,6 +93,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 db.Wydarzenia.RemoveRange(db.Wydarzenia.Where(w => w.Poczatek >= dzień.ToDateTime(new TimeOnly(0, 0))
                 && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59))));
                 db.SaveChanges();
@@ -100,6 +106,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             {
                 using (var db = new DatabaseContext())
                 {
+                    db.Database.EnsureCreated();
                     return db.Wydarzenia.Count();
                 }
             }
@@ -109,6 +116,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         {
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 return db.Wydarzenia.Where(w => w.Nazwa.Equals(nazwa)).First();
             }
         }
@@ -119,6 +127,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             {
                 using (var db = new DatabaseContext())
                 {
+                    db.Database.EnsureCreated();
                     DateTime teraz = DateTime.Now;
                     return db.Wydarzenia.Where(w=>w.Koniec.CompareTo(teraz)>0).OrderBy(w => w.Poczatek).First();
                 }
@@ -129,6 +138,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
         { 
             using (var db = new DatabaseContext())
             {
+                db.Database.EnsureCreated();
                 return db.Wydarzenia.Where(w => w.Poczatek>=dzień.ToDateTime(new TimeOnly(0,0))
                 && w.Koniec <= dzień.ToDateTime(new TimeOnly(23, 59)))
                 .ToList();
