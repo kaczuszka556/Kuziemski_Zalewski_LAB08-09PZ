@@ -8,7 +8,6 @@ namespace GUI
     {
         private DateTime CurrentDate = DateTime.Now;
         private int HighlightedRow = 0;
-        private EventCalendarDayLabel[] EventCalendarDayLabels;
 
         public Main()
         {
@@ -17,18 +16,7 @@ namespace GUI
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
 
-            EventCalendarDayLabels = new EventCalendarDayLabel[]
-            {
-                EventCalendarDay1,
-                EventCalendarDay2,
-                EventCalendarDay3,
-                EventCalendarDay4,
-                EventCalendarDay5,
-                EventCalendarDay6,
-                EventCalendarDay7,
-            };
-
-            UpdateEventCalendarDayLabels();
+            EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
 
 
         }
@@ -65,7 +53,7 @@ namespace GUI
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
                     if (control != null && control is CalendarDayLabel label)
                     {
-                        
+
                         if (licznikDzien > dni)
                         {
                             label.Day = licznikPoza;
@@ -125,12 +113,12 @@ namespace GUI
                 {
                     HighlightedRow = cal.Week;
                 }
-                
+
 
             }
-                
+
             LeftKalendarzTable.Invalidate();
-            UpdateEventCalendarDayLabels();
+            EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
 
 
         }
@@ -148,16 +136,8 @@ namespace GUI
             }
         }
 
-        private void UpdateEventCalendarDayLabels()
-        {
-            DateOnly[] daysInWeek = Narzêdziowa.WszystkieDniWtygodniuPoNumerze(HighlightedRow + 1, CurrentDate.Month, CurrentDate.Year);
 
-            for (int i = 0; i < daysInWeek.Length; i++)
-            {
-                EventCalendarDayLabels[i].Text = daysInWeek[i].ToString();
 
-            }
-        }
 
         private void ClearCalendar()
         {
@@ -182,7 +162,7 @@ namespace GUI
         {
             CurrentDate = CurrentDate.AddMonths(numberOfMonths);
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
-            UpdateEventCalendarDayLabels();
+            EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
         }
 
         private void LeftCalendarNextMonth_Click(object sender, EventArgs e)
