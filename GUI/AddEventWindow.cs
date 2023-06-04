@@ -15,7 +15,6 @@ namespace GUI
     {
         public AddEventWindow()
         {
-            this.Text = "Add new Event";
             this.TopMost = true;
             InitializeComponent();
         }
@@ -29,12 +28,23 @@ namespace GUI
                 return;
             }
 
-            MessageBox.Show("Succesfully added!.", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+
+            DateTime StartDate = StartDatePicker.Value.Date;
+            StartDate = StartDate.Date.Add(StartTimePicker.Value.TimeOfDay);
+            DateTime EndDate = EndDatePicker.Value.Date;
+            EndDate = EndDate.Date.Add(EndTimePicker.Value.TimeOfDay);
+
+            if(EndDate < StartDate)
+            {
+                MessageBox.Show("End date can't be before start date.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             KalendarzService kalendarzService = new KalendarzService();
+            kalendarzService.AddWydarznie(new Wydarzenie(EventNameInput.Text, EventDescriptionInput.Text, StartDate, EndDate));
 
-            kalendarzService.AddWydarznie(new Wydarzenie(EventNameInput.Text, EventDescriptionInput.Text, DateTime.Now, DateTime.Now.AddMinutes(120)));
-
+            MessageBox.Show("Event added succesfully!", "Event added", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
