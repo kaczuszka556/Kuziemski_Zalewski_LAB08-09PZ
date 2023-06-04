@@ -197,8 +197,5 @@ namespace GUI
 
     }
 
-    public class EventCalendarDayLabel : Label
-    {
-
-    }
+   
 }

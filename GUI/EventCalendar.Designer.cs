@@ -36,6 +36,13 @@
             EventCalendarDay3 = new EventCalendarDayLabel();
             EventCalendarDay2 = new EventCalendarDayLabel();
             EventCalendarDay1 = new EventCalendarDayLabel();
+            EventCalendarEventLabel1 = new EventCalendarEventLabel();
+            EventCalendarEventLabel2 = new EventCalendarEventLabel();
+            EventCalendarEventLabel3 = new EventCalendarEventLabel();
+            EventCalendarEventLabel4 = new EventCalendarEventLabel();
+            EventCalendarEventLabel5 = new EventCalendarEventLabel();
+            EventCalendarEventLabel6 = new EventCalendarEventLabel();
+            EventCalendarEventLabel7 = new EventCalendarEventLabel();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,6 +57,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2857161F));
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel7, 6, 1);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel6, 5, 1);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel5, 4, 1);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel4, 3, 1);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel3, 2, 1);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel2, 1, 1);
             tableLayoutPanel1.Controls.Add(EventCalendarDay7, 6, 0);
             tableLayoutPanel1.Controls.Add(EventCalendarDay6, 5, 0);
             tableLayoutPanel1.Controls.Add(EventCalendarDay5, 4, 0);
@@ -57,6 +70,7 @@
             tableLayoutPanel1.Controls.Add(EventCalendarDay3, 2, 0);
             tableLayoutPanel1.Controls.Add(EventCalendarDay2, 1, 0);
             tableLayoutPanel1.Controls.Add(EventCalendarDay1, 0, 0);
+            tableLayoutPanel1.Controls.Add(EventCalendarEventLabel1, 0, 1);
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
@@ -135,6 +149,69 @@
             EventCalendarDay1.TabIndex = 0;
             EventCalendarDay1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // EventCalendarEventLabel1
+            // 
+            EventCalendarEventLabel1.AutoSize = true;
+            EventCalendarEventLabel1.Dock = DockStyle.Fill;
+            EventCalendarEventLabel1.Location = new Point(4, 73);
+            EventCalendarEventLabel1.Name = "EventCalendarEventLabel1";
+            EventCalendarEventLabel1.Size = new Size(156, 648);
+            EventCalendarEventLabel1.TabIndex = 7;
+            // 
+            // EventCalendarEventLabel2
+            // 
+            EventCalendarEventLabel2.AutoSize = true;
+            EventCalendarEventLabel2.Dock = DockStyle.Fill;
+            EventCalendarEventLabel2.Location = new Point(167, 73);
+            EventCalendarEventLabel2.Name = "EventCalendarEventLabel2";
+            EventCalendarEventLabel2.Size = new Size(156, 648);
+            EventCalendarEventLabel2.TabIndex = 8;
+            // 
+            // EventCalendarEventLabel3
+            // 
+            EventCalendarEventLabel3.AutoSize = true;
+            EventCalendarEventLabel3.Dock = DockStyle.Fill;
+            EventCalendarEventLabel3.Location = new Point(330, 73);
+            EventCalendarEventLabel3.Name = "EventCalendarEventLabel3";
+            EventCalendarEventLabel3.Size = new Size(156, 648);
+            EventCalendarEventLabel3.TabIndex = 9;
+            // 
+            // EventCalendarEventLabel4
+            // 
+            EventCalendarEventLabel4.AutoSize = true;
+            EventCalendarEventLabel4.Dock = DockStyle.Fill;
+            EventCalendarEventLabel4.Location = new Point(493, 73);
+            EventCalendarEventLabel4.Name = "EventCalendarEventLabel4";
+            EventCalendarEventLabel4.Size = new Size(156, 648);
+            EventCalendarEventLabel4.TabIndex = 10;
+            // 
+            // EventCalendarEventLabel5
+            // 
+            EventCalendarEventLabel5.AutoSize = true;
+            EventCalendarEventLabel5.Dock = DockStyle.Fill;
+            EventCalendarEventLabel5.Location = new Point(656, 73);
+            EventCalendarEventLabel5.Name = "EventCalendarEventLabel5";
+            EventCalendarEventLabel5.Size = new Size(156, 648);
+            EventCalendarEventLabel5.TabIndex = 11;
+            // 
+            // EventCalendarEventLabel6
+            // 
+            EventCalendarEventLabel6.AutoSize = true;
+            EventCalendarEventLabel6.Dock = DockStyle.Fill;
+            EventCalendarEventLabel6.Location = new Point(819, 73);
+            EventCalendarEventLabel6.Name = "EventCalendarEventLabel6";
+            EventCalendarEventLabel6.Size = new Size(156, 648);
+            EventCalendarEventLabel6.TabIndex = 12;
+            // 
+            // EventCalendarEventLabel7
+            // 
+            EventCalendarEventLabel7.AutoSize = true;
+            EventCalendarEventLabel7.Dock = DockStyle.Fill;
+            EventCalendarEventLabel7.Location = new Point(982, 73);
+            EventCalendarEventLabel7.Name = "EventCalendarEventLabel7";
+            EventCalendarEventLabel7.Size = new Size(159, 648);
+            EventCalendarEventLabel7.TabIndex = 13;
+            // 
             // EventCalendar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,5 +234,12 @@
         private EventCalendarDayLabel EventCalendarDay3;
         private EventCalendarDayLabel EventCalendarDay2;
         private EventCalendarDayLabel EventCalendarDay1;
+        private EventCalendarEventLabel EventCalendarEventLabel7;
+        private EventCalendarEventLabel EventCalendarEventLabel6;
+        private EventCalendarEventLabel EventCalendarEventLabel5;
+        private EventCalendarEventLabel EventCalendarEventLabel4;
+        private EventCalendarEventLabel EventCalendarEventLabel3;
+        private EventCalendarEventLabel EventCalendarEventLabel2;
+        private EventCalendarEventLabel EventCalendarEventLabel1;
     }
 }
