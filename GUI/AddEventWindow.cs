@@ -23,7 +23,8 @@ namespace GUI
         private void AddButton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(EventNameInput.Text) || string.IsNullOrWhiteSpace(EventDescriptionInput.Text)){
+            if (string.IsNullOrWhiteSpace(EventNameInput.Text) || string.IsNullOrWhiteSpace(EventDescriptionInput.Text))
+            {
                 MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
