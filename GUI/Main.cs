@@ -65,7 +65,7 @@ namespace GUI
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
                     if (control != null && control is CalendarDayLabel label)
                     {
-                        
+
                         if (licznikDzien > dni)
                         {
                             label.Day = licznikPoza;
@@ -125,10 +125,10 @@ namespace GUI
                 {
                     HighlightedRow = cal.Week;
                 }
-                
+
 
             }
-                
+
             LeftKalendarzTable.Invalidate();
             UpdateEventCalendarDayLabels();
 
@@ -195,6 +195,12 @@ namespace GUI
             ChangeCalendarMonth(-1);
         }
 
+        private void opcjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OptionsWindow optionsWindow = new OptionsWindow();
+
+            optionsWindow.ShowDialog();
+        }
     }
 
     public class DayEventArgs
