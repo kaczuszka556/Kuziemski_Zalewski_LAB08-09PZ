@@ -185,8 +185,11 @@ namespace GUI
 
                 e.Graphics.FillPath(brushes[i], path);
                 e.Graphics.DrawPath(Pens.Black, path);
-  
-                e.Graphics.DrawString(Events[i].Wydarzenie.Nazwa, new Font("Arial", 10, GraphicsUnit.Point), Brushes.Black, arcRect.X, arcRect.Y);
+
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.FormatFlags = StringFormatFlags.NoWrap;
+
+                e.Graphics.DrawString(Events[i].Wydarzenie.Nazwa, new Font("Arial", 10, GraphicsUnit.Point), Brushes.Black, Events[i].Rectangle, stringFormat);
 
             }
 
