@@ -1,11 +1,9 @@
 ﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,7 +59,7 @@ namespace GUI
                 foreach (Wydarzenie item in wydarzenia)
                 {
                     int neighboursCount = wydarzenia
-                        .Where(w =>
+                        .Where(w => 
                         ((item.Poczatek <= w.Poczatek && item.Koniec >= w.Poczatek) ||
                         (item.Poczatek >= w.Poczatek && item.Koniec <= w.Koniec))
                         )
@@ -70,7 +68,7 @@ namespace GUI
 
                     Rectangle rectangle = new Rectangle();
 
-                    if (neighboursCount > 1)
+                    if(neighboursCount > 1)
                     {
                         rectangle.X = startingX;
                         startingX += EventCalendarEventPanels[i].Width / neighboursCount;
@@ -82,7 +80,7 @@ namespace GUI
                         startingX = 0;
                     }
 
-                    if (daysInWeek[i].Day != item.Poczatek.Day)
+                    if(daysInWeek[i].Day != item.Poczatek.Day)
                         rectangle.Y = 0;
                     else
                         rectangle.Y = (EventCalendarEventPanels[i].Height / 24) * item.Poczatek.Hour;
@@ -90,15 +88,14 @@ namespace GUI
 
                     rectangle.Width = neighboursCount != 1 ? EventCalendarEventPanels[i].Width / neighboursCount : EventCalendarEventPanels[i].Width;
 
-                    if (item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
+                    if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
                         rectangle.Height = EventCalendarEventPanels[i].Height;
-                    else if (item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day == item.Koniec.Day)
+                    else if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day == item.Koniec.Day)
                         rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * item.Koniec.Hour;
                     else
-                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * (item.Koniec.Hour - item.Poczatek.Hour);
-                    
+                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) *  (item.Koniec.Hour - item.Poczatek.Hour);
                     EventCalendarEventPanels[i].Events.Add(new EventDisplay(rectangle, item));
-
+                    //EventCalendarEventPanels[i].Text += item.ToString();
                 }
                 EventCalendarEventPanels[i].Refresh();
             }
@@ -125,15 +122,6 @@ namespace GUI
 
     public class EventCalendarEventPanel : Panel
     {
-
-        public int PaddingRight { get; set; }
-        public int PaddingLeft { get; set; }
-
-        public EventCalendarEventPanel()
-        {
-            PaddingRight = 2; PaddingLeft = 5;
-        }
-
         private List<Brush> brushes = new List<Brush>()
         {
             Brushes.Green,
@@ -146,48 +134,11 @@ namespace GUI
 
         protected override void OnPaint(PaintEventArgs e)
         {
-
-
             base.OnPaint(e);
-
-            int cornerRadius = 4;
 
             for (int i = 0; i < Events.Count; i++)
             {
-                Rectangle rect = Events[i].Rectangle;
-                int x = rect.X;
-                int y = rect.Y;
-                int width = rect.Width - PaddingRight;
-                int height = rect.Height;
-
-                int diameter = 2 * cornerRadius;
-                Rectangle arcRect = new Rectangle(x, y, diameter, diameter);
-                GraphicsPath path = new GraphicsPath();
-
-                //Top-left 
-                path.AddArc(arcRect, 180, 90);
-                path.AddLine(x + cornerRadius, y, x + width - cornerRadius, y);
-
-                //Top-right 
-                arcRect.X = x + width - diameter;
-                path.AddArc(arcRect, 270, 90);
-                path.AddLine(x + width, y + cornerRadius, x + width, y + height - cornerRadius);
-
-                //Bottom-right 
-                arcRect.Y = y + height - diameter;
-                path.AddArc(arcRect, 0, 90);
-                path.AddLine(x + width - cornerRadius, y + height, x + cornerRadius, y + height);
-
-                //Bottom-left 
-                arcRect.X = x;
-                path.AddArc(arcRect, 90, 90);
-                path.AddLine(x, y + height - cornerRadius, x, y + cornerRadius);
-
-                e.Graphics.FillPath(brushes[i], path);
-                e.Graphics.DrawPath(Pens.Black, path);
-  
-                e.Graphics.DrawString(Events[i].Wydarzenie.Nazwa, new Font("Arial", 10, GraphicsUnit.Point), Brushes.Black, arcRect.X, arcRect.Y);
-
+                e.Graphics.FillRectangle(brushes[i], Events[i].Rectangle);
             }
 
         }

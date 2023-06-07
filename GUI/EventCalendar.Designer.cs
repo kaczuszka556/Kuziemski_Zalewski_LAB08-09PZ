@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            EventCalendarEventPanel7 = new EventCalendarEventPanel();
-            EventCalendarEventPanel6 = new EventCalendarEventPanel();
-            EventCalendarEventPanel5 = new EventCalendarEventPanel();
-            EventCalendarEventPanel4 = new EventCalendarEventPanel();
-            EventCalendarEventPanel3 = new EventCalendarEventPanel();
-            EventCalendarEventPanel2 = new EventCalendarEventPanel();
             EventCalendarDay7 = new EventCalendarDayLabel();
             EventCalendarDay6 = new EventCalendarDayLabel();
             EventCalendarDay5 = new EventCalendarDayLabel();
@@ -43,6 +37,12 @@
             EventCalendarDay2 = new EventCalendarDayLabel();
             EventCalendarDay1 = new EventCalendarDayLabel();
             EventCalendarEventPanel1 = new EventCalendarEventPanel();
+            EventCalendarEventPanel2 = new EventCalendarEventPanel();
+            EventCalendarEventPanel3 = new EventCalendarEventPanel();
+            EventCalendarEventPanel4 = new EventCalendarEventPanel();
+            EventCalendarEventPanel5 = new EventCalendarEventPanel();
+            EventCalendarEventPanel6 = new EventCalendarEventPanel();
+            EventCalendarEventPanel7 = new EventCalendarEventPanel();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,55 +78,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
             tableLayoutPanel1.Size = new Size(1145, 722);
             tableLayoutPanel1.TabIndex = 4;
-            // 
-            // EventCalendarEventPanel7
-            // 
-            EventCalendarEventPanel7.Dock = DockStyle.Fill;
-            EventCalendarEventPanel7.Location = new Point(982, 76);
-            EventCalendarEventPanel7.Name = "EventCalendarEventPanel7";
-            EventCalendarEventPanel7.Size = new Size(159, 642);
-            EventCalendarEventPanel7.TabIndex = 13;
-            // 
-            // EventCalendarEventPanel6
-            // 
-            EventCalendarEventPanel6.Dock = DockStyle.Fill;
-            EventCalendarEventPanel6.Location = new Point(819, 76);
-            EventCalendarEventPanel6.Name = "EventCalendarEventPanel6";
-            EventCalendarEventPanel6.Size = new Size(156, 642);
-            EventCalendarEventPanel6.TabIndex = 12;
-            // 
-            // EventCalendarEventPanel5
-            // 
-            EventCalendarEventPanel5.Dock = DockStyle.Fill;
-            EventCalendarEventPanel5.Location = new Point(656, 76);
-            EventCalendarEventPanel5.Name = "EventCalendarEventPanel5";
-            EventCalendarEventPanel5.Size = new Size(156, 642);
-            EventCalendarEventPanel5.TabIndex = 11;
-            // 
-            // EventCalendarEventPanel4
-            // 
-            EventCalendarEventPanel4.Dock = DockStyle.Fill;
-            EventCalendarEventPanel4.Location = new Point(493, 76);
-            EventCalendarEventPanel4.Name = "EventCalendarEventPanel4";
-            EventCalendarEventPanel4.Size = new Size(156, 642);
-            EventCalendarEventPanel4.TabIndex = 10;
-            // 
-            // EventCalendarEventPanel3
-            // 
-            EventCalendarEventPanel3.Dock = DockStyle.Fill;
-            EventCalendarEventPanel3.Location = new Point(330, 76);
-            EventCalendarEventPanel3.Name = "EventCalendarEventPanel3";
-            EventCalendarEventPanel3.Padding = new Padding(25, 5, 5, 0);
-            EventCalendarEventPanel3.Size = new Size(156, 642);
-            EventCalendarEventPanel3.TabIndex = 9;
-            // 
-            // EventCalendarEventPanel2
-            // 
-            EventCalendarEventPanel2.Dock = DockStyle.Fill;
-            EventCalendarEventPanel2.Location = new Point(167, 76);
-            EventCalendarEventPanel2.Name = "EventCalendarEventPanel2";
-            EventCalendarEventPanel2.Size = new Size(156, 642);
-            EventCalendarEventPanel2.TabIndex = 8;
             // 
             // EventCalendarDay7
             // 
@@ -205,6 +156,54 @@
             EventCalendarEventPanel1.Name = "EventCalendarEventPanel1";
             EventCalendarEventPanel1.Size = new Size(156, 642);
             EventCalendarEventPanel1.TabIndex = 7;
+            // 
+            // EventCalendarEventPanel2
+            // 
+            EventCalendarEventPanel2.Dock = DockStyle.Fill;
+            EventCalendarEventPanel2.Location = new Point(167, 76);
+            EventCalendarEventPanel2.Name = "EventCalendarEventPanel2";
+            EventCalendarEventPanel2.Size = new Size(156, 642);
+            EventCalendarEventPanel2.TabIndex = 8;
+            // 
+            // EventCalendarEventPanel3
+            // 
+            EventCalendarEventPanel3.Dock = DockStyle.Fill;
+            EventCalendarEventPanel3.Location = new Point(330, 76);
+            EventCalendarEventPanel3.Name = "EventCalendarEventPanel3";
+            EventCalendarEventPanel3.Size = new Size(156, 642);
+            EventCalendarEventPanel3.TabIndex = 9;
+            // 
+            // EventCalendarEventPanel4
+            // 
+            EventCalendarEventPanel4.Dock = DockStyle.Fill;
+            EventCalendarEventPanel4.Location = new Point(493, 76);
+            EventCalendarEventPanel4.Name = "EventCalendarEventPanel4";
+            EventCalendarEventPanel4.Size = new Size(156, 642);
+            EventCalendarEventPanel4.TabIndex = 10;
+            // 
+            // EventCalendarEventPanel5
+            // 
+            EventCalendarEventPanel5.Dock = DockStyle.Fill;
+            EventCalendarEventPanel5.Location = new Point(656, 76);
+            EventCalendarEventPanel5.Name = "EventCalendarEventPanel5";
+            EventCalendarEventPanel5.Size = new Size(156, 642);
+            EventCalendarEventPanel5.TabIndex = 11;
+            // 
+            // EventCalendarEventPanel6
+            // 
+            EventCalendarEventPanel6.Dock = DockStyle.Fill;
+            EventCalendarEventPanel6.Location = new Point(819, 76);
+            EventCalendarEventPanel6.Name = "EventCalendarEventPanel6";
+            EventCalendarEventPanel6.Size = new Size(156, 642);
+            EventCalendarEventPanel6.TabIndex = 12;
+            // 
+            // EventCalendarEventPanel7
+            // 
+            EventCalendarEventPanel7.Dock = DockStyle.Fill;
+            EventCalendarEventPanel7.Location = new Point(982, 76);
+            EventCalendarEventPanel7.Name = "EventCalendarEventPanel7";
+            EventCalendarEventPanel7.Size = new Size(159, 642);
+            EventCalendarEventPanel7.TabIndex = 13;
             // 
             // EventCalendar
             // 
