@@ -14,7 +14,7 @@ namespace GUI
     public partial class EventCalendar : UserControl
     {
         private EventCalendarDayLabel[] EventCalendarDayLabels;
-        private EventCalendarEventLabel[] EventCalendarEventLabels;
+        private EventCalendarEventPanel[] EventCalendarEventPanels;
         public EventCalendar()
         {
             InitializeComponent();
@@ -30,15 +30,15 @@ namespace GUI
                 EventCalendarDay7
             };
 
-            EventCalendarEventLabels = new EventCalendarEventLabel[]
+            EventCalendarEventPanels = new EventCalendarEventPanel[]
             {
-                EventCalendarEventLabel1,
-                EventCalendarEventLabel2,
-                EventCalendarEventLabel3,
-                EventCalendarEventLabel4,
-                EventCalendarEventLabel5,
-                EventCalendarEventLabel6,
-                EventCalendarEventLabel7,
+                EventCalendarEventPanel1,
+                EventCalendarEventPanel2,
+                EventCalendarEventPanel3,
+                EventCalendarEventPanel4,
+                EventCalendarEventPanel5,
+                EventCalendarEventPanel6,
+                EventCalendarEventPanel7,
             };
         }
 
@@ -51,14 +51,46 @@ namespace GUI
             for (int i = 0; i < daysInWeek.Length; i++)
             {
                 EventCalendarDayLabels[i].Text = daysInWeek[i].ToString();
+                EventCalendarEventPanels[i].Events.Clear();
+                List<Wydarzenie> wydarzenia = kalendarzService.ZnajdżWydarzeniaDnia(daysInWeek[i]);
 
-                foreach (Wydarzenie item in kalendarzService.ZnajdżWydarzeniaDnia(daysInWeek[i]))
+                foreach (Wydarzenie item in wydarzenia)
                 {
-                    EventCalendarEventLabels[i].Text += item.ToString();
+
+                    Rectangle rectangle = new Rectangle();
+                    rectangle.X = 0;
+
+                    if(daysInWeek[i].Day != item.Poczatek.Day)
+                        rectangle.Y = 0;
+                    else
+                        rectangle.Y = (EventCalendarEventPanels[i].Height / 24) * item.Poczatek.Hour;
+                    rectangle.Width = EventCalendarEventPanels[i].Width / wydarzenia.Count;
+
+                    if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
+                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * (24 - item.Poczatek.Hour);
+                    else if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day == item.Koniec.Day)
+                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * item.Koniec.Hour;
+                    else
+                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) *  (item.Koniec.Hour - item.Poczatek.Hour);
+                    EventCalendarEventPanels[i].Events.Add(new EventDisplay(rectangle, item));
+                    //EventCalendarEventPanels[i].Text += item.ToString();
                 }
+                EventCalendarEventPanels[i].Refresh();
             }
         }
 
+    }
+
+    public class EventDisplay
+    {
+        public Rectangle Rectangle { get; set; }
+        public Wydarzenie Wydarzenie { get; set; }
+
+        public EventDisplay(Rectangle rectangle, Wydarzenie wydarzenie)
+        {
+            Rectangle = rectangle;
+            Wydarzenie = wydarzenie;
+        }
     }
 
     public class EventCalendarDayLabel : Label
@@ -66,8 +98,27 @@ namespace GUI
 
     }
 
-    public class EventCalendarEventLabel : Label
+    public class EventCalendarEventPanel : Panel
     {
+        private List<Brush> brushes = new List<Brush>()
+        {
+            Brushes.Green,
+            Brushes.Blue,
+            Brushes.Magenta,
+            Brushes.Yellow,
+            Brushes.Orange
+        };
+        public List<EventDisplay> Events { get; } = new List<EventDisplay>();
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            for (int i = 0; i < Events.Count; i++)
+            {
+                e.Graphics.FillRectangle(brushes[i], Events[i].Rectangle);
+            }
+
+        }
     }
 }
