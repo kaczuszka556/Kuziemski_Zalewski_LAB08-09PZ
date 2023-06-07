@@ -54,20 +54,42 @@ namespace GUI
                 EventCalendarEventPanels[i].Events.Clear();
                 List<Wydarzenie> wydarzenia = kalendarzService.ZnajdżWydarzeniaDnia(daysInWeek[i]);
 
+                int startingX = 0;
+
                 foreach (Wydarzenie item in wydarzenia)
                 {
+                    int neighboursCount = wydarzenia
+                        .Where(w => 
+                        ((item.Poczatek <= w.Poczatek && item.Koniec >= w.Poczatek) ||
+                        (item.Poczatek >= w.Poczatek && item.Koniec <= w.Koniec))
+                        )
+                        .ToList().Count;
+
 
                     Rectangle rectangle = new Rectangle();
-                    rectangle.X = 0;
+
+                    if(neighboursCount > 1)
+                    {
+                        rectangle.X = startingX;
+                        startingX += EventCalendarEventPanels[i].Width / neighboursCount;
+
+                    }
+                    else
+                    {
+                        rectangle.X = 0;
+                        startingX = 0;
+                    }
 
                     if(daysInWeek[i].Day != item.Poczatek.Day)
                         rectangle.Y = 0;
                     else
                         rectangle.Y = (EventCalendarEventPanels[i].Height / 24) * item.Poczatek.Hour;
-                    rectangle.Width = EventCalendarEventPanels[i].Width / wydarzenia.Count;
+
+
+                    rectangle.Width = neighboursCount != 1 ? EventCalendarEventPanels[i].Width / neighboursCount : EventCalendarEventPanels[i].Width;
 
                     if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
-                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * (24 - item.Poczatek.Hour);
+                        rectangle.Height = EventCalendarEventPanels[i].Height;
                     else if(item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day == item.Koniec.Day)
                         rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * item.Koniec.Hour;
                     else
