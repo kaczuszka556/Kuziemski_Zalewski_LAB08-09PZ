@@ -12,8 +12,16 @@ namespace GUI
 
         public Main()
         {
+            // TODO: Zaci¹gaæ z bazy jêzyk i tu go ustawiaæ
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo("pl");
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo("pl");
+
             InitializeComponent();
-            this.Text = "Kalendarz";
+
+
+
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
 
@@ -65,7 +73,7 @@ namespace GUI
                     Control control = LeftKalendarzTable.GetControlFromPosition(column, row);
                     if (control != null && control is CalendarDayLabel label)
                     {
-                        
+
                         if (licznikDzien > dni)
                         {
                             label.Day = licznikPoza;
@@ -125,10 +133,10 @@ namespace GUI
                 {
                     HighlightedRow = cal.Week;
                 }
-                
+
 
             }
-                
+
             LeftKalendarzTable.Invalidate();
             UpdateEventCalendarDayLabels();
 
