@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -62,8 +63,11 @@ namespace GUI
                 {
                     int neighboursCount = wydarzenia
                         .Where(w =>
-                        ((item.Poczatek <= w.Poczatek && item.Koniec >= w.Poczatek) ||
-                        (item.Poczatek >= w.Poczatek && item.Koniec <= w.Koniec))
+                        (item.Koniec >= w.Poczatek && item.Koniec <= w.Koniec) ||
+                        (w.Koniec >= item.Poczatek && w.Koniec <= item.Koniec)
+                        //(item.Poczatek > w.Poczatek && item.Koniec > w.Koniec) ||
+                        //((item.Poczatek <= w.Poczatek && item.Koniec >= w.Poczatek) ||
+                        //(item.Poczatek >= w.Poczatek && item.Koniec <= w.Koniec))
                         )
                         .ToList().Count;
 
@@ -193,6 +197,35 @@ namespace GUI
 
             }
 
+        }
+
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+
+            foreach (var item in Events)
+            {
+                if (item.Rectangle.Contains(e.Location))
+                {
+                    // TODO: Tutaj będzie wywoływanie okienka od szczegółów wydarzenia
+                    Debug.WriteLine(item.Wydarzenie.Nazwa); break;
+                }
+            }
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+
+            Cursor cursor = Cursors.Default;
+            foreach (var item in Events)
+            {
+                if (item.Rectangle.Contains(e.Location))
+                {
+                    cursor = Cursors.Hand; break;
+                }
+            }
+            Cursor = cursor;
         }
     }
 }
