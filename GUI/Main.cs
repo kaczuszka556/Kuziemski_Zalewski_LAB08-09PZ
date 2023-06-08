@@ -11,6 +11,12 @@ namespace GUI
 
         public Main()
         {
+            // TODO: Zaci¹gaæ z bazy jêzyk i tu go ustawiaæ
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo("pl");
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo("pl");
+
             InitializeComponent();
             TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
