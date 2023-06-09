@@ -15,6 +15,11 @@ namespace GUI
     {
         public AddEventWindow()
         {
+            // TODO: Zaciągać z bazy język i tu go ustawiać
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo("pl");
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo("pl");
             this.TopMost = true;
             InitializeComponent();
         }
@@ -28,14 +33,14 @@ namespace GUI
                 return;
             }
 
-            
+
 
             DateTime StartDate = StartDatePicker.Value.Date;
             StartDate = StartDate.Date.Add(StartTimePicker.Value.TimeOfDay);
             DateTime EndDate = EndDatePicker.Value.Date;
             EndDate = EndDate.Date.Add(EndTimePicker.Value.TimeOfDay);
 
-            if(EndDate < StartDate)
+            if (EndDate < StartDate)
             {
                 MessageBox.Show("End date can't be before start date.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

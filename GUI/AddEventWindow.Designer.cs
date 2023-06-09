@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEventWindow));
             EventNameLabel = new Label();
             EventNameInput = new TextBox();
             EventDescritpionLabel = new Label();
@@ -43,104 +44,71 @@
             // 
             // EventNameLabel
             // 
-            EventNameLabel.AutoSize = true;
-            EventNameLabel.Location = new Point(12, 9);
+            resources.ApplyResources(EventNameLabel, "EventNameLabel");
             EventNameLabel.Name = "EventNameLabel";
-            EventNameLabel.Size = new Size(89, 20);
-            EventNameLabel.TabIndex = 0;
-            EventNameLabel.Text = "Event name:";
             // 
             // EventNameInput
             // 
-            EventNameInput.Location = new Point(12, 32);
+            resources.ApplyResources(EventNameInput, "EventNameInput");
             EventNameInput.Name = "EventNameInput";
-            EventNameInput.Size = new Size(576, 27);
-            EventNameInput.TabIndex = 1;
             // 
             // EventDescritpionLabel
             // 
-            EventDescritpionLabel.AutoSize = true;
-            EventDescritpionLabel.Location = new Point(12, 115);
+            resources.ApplyResources(EventDescritpionLabel, "EventDescritpionLabel");
             EventDescritpionLabel.Name = "EventDescritpionLabel";
-            EventDescritpionLabel.Size = new Size(126, 20);
-            EventDescritpionLabel.TabIndex = 2;
-            EventDescritpionLabel.Text = "Event description:";
             // 
             // EventDescriptionInput
             // 
-            EventDescriptionInput.Location = new Point(12, 138);
-            EventDescriptionInput.Multiline = true;
+            resources.ApplyResources(EventDescriptionInput, "EventDescriptionInput");
             EventDescriptionInput.Name = "EventDescriptionInput";
-            EventDescriptionInput.Size = new Size(576, 182);
-            EventDescriptionInput.TabIndex = 3;
             // 
             // AddButton
             // 
-            AddButton.Location = new Point(494, 565);
+            resources.ApplyResources(AddButton, "AddButton");
             AddButton.Name = "AddButton";
-            AddButton.Size = new Size(94, 29);
-            AddButton.TabIndex = 4;
-            AddButton.Text = "Add Event";
             AddButton.UseVisualStyleBackColor = true;
             AddButton.Click += AddButton_Click;
             // 
             // StartTimePicker
             // 
             StartTimePicker.Format = DateTimePickerFormat.Time;
-            StartTimePicker.Location = new Point(133, 85);
+            resources.ApplyResources(StartTimePicker, "StartTimePicker");
             StartTimePicker.Name = "StartTimePicker";
             StartTimePicker.ShowUpDown = true;
-            StartTimePicker.Size = new Size(89, 27);
-            StartTimePicker.TabIndex = 5;
             // 
             // TimeLabel
             // 
-            TimeLabel.AutoSize = true;
-            TimeLabel.Location = new Point(12, 62);
+            resources.ApplyResources(TimeLabel, "TimeLabel");
             TimeLabel.Name = "TimeLabel";
-            TimeLabel.Size = new Size(125, 20);
-            TimeLabel.TabIndex = 6;
-            TimeLabel.Text = "Duration of event";
             // 
             // EndTimePicker
             // 
             EndTimePicker.Format = DateTimePickerFormat.Time;
-            EndTimePicker.Location = new Point(378, 85);
+            resources.ApplyResources(EndTimePicker, "EndTimePicker");
             EndTimePicker.Name = "EndTimePicker";
             EndTimePicker.ShowUpDown = true;
-            EndTimePicker.Size = new Size(89, 27);
-            EndTimePicker.TabIndex = 7;
             // 
             // StartDatePicker
             // 
             StartDatePicker.Format = DateTimePickerFormat.Short;
-            StartDatePicker.Location = new Point(12, 85);
+            resources.ApplyResources(StartDatePicker, "StartDatePicker");
             StartDatePicker.Name = "StartDatePicker";
-            StartDatePicker.Size = new Size(115, 27);
-            StartDatePicker.TabIndex = 8;
             // 
             // EndDatePicker
             // 
             EndDatePicker.Format = DateTimePickerFormat.Short;
-            EndDatePicker.Location = new Point(257, 85);
+            resources.ApplyResources(EndDatePicker, "EndDatePicker");
             EndDatePicker.Name = "EndDatePicker";
-            EndDatePicker.Size = new Size(115, 27);
-            EndDatePicker.TabIndex = 9;
             // 
             // TimeToLabel
             // 
-            TimeToLabel.AutoSize = true;
-            TimeToLabel.Location = new Point(228, 90);
+            resources.ApplyResources(TimeToLabel, "TimeToLabel");
             TimeToLabel.Name = "TimeToLabel";
-            TimeToLabel.Size = new Size(23, 20);
-            TimeToLabel.TabIndex = 10;
-            TimeToLabel.Text = "to";
             // 
             // AddEventWindow
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 606);
             Controls.Add(TimeToLabel);
             Controls.Add(EndDatePicker);
             Controls.Add(StartDatePicker);
@@ -153,7 +121,6 @@
             Controls.Add(EventNameInput);
             Controls.Add(EventNameLabel);
             Name = "AddEventWindow";
-            Text = "Add new event";
             ResumeLayout(false);
             PerformLayout();
         }
