@@ -133,7 +133,7 @@ namespace GUI
             CurrentDate = DateTime.Now;
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
-            UpdateEventCalendarDayLabels();
+            EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
         }
 
         private void LeftKalendarzTable_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -281,4 +281,3 @@ namespace GUI
             timer.Dispose();
         }
     }
-}
