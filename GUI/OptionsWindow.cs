@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,15 +22,17 @@ namespace GUI
         }
 
         UserControl CurrentUserControl;
-
+        PreferencjeService PreferencjeService;
         public OptionsWindow()
         {
 
-            // TODO: Zaciągać z bazy język i tu go ustawiać
+            PreferencjeService = new PreferencjeService();
+
             System.Threading.Thread.CurrentThread.CurrentCulture =
-                new System.Globalization.CultureInfo("pl");
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
             System.Threading.Thread.CurrentThread.CurrentUICulture =
-                new System.Globalization.CultureInfo("pl");
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+
             InitializeComponent();
             List<TreeNode> allNodes = GetAllNodes(OptionsMenu.Nodes);
 

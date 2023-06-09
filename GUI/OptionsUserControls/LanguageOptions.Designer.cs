@@ -38,6 +38,7 @@
             LanguageSelect.FormattingEnabled = true;
             resources.ApplyResources(LanguageSelect, "LanguageSelect");
             LanguageSelect.Name = "LanguageSelect";
+            LanguageSelect.SelectedIndexChanged += LanguageSelect_SelectedIndexChanged;
             // 
             // LanguageSelectLabel
             // 

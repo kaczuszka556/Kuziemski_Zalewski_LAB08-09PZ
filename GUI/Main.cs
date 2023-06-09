@@ -9,13 +9,16 @@ namespace GUI
         private DateTime CurrentDate = DateTime.Now;
         private int HighlightedRow = 0;
 
+        private PreferencjeService PreferencjeService;
+
         public Main()
         {
-            // TODO: Zaci¹gaæ z bazy jêzyk i tu go ustawiaæ
+            PreferencjeService = new PreferencjeService();
+
             System.Threading.Thread.CurrentThread.CurrentCulture =
-                new System.Globalization.CultureInfo("pl");
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
             System.Threading.Thread.CurrentThread.CurrentUICulture =
-                new System.Globalization.CultureInfo("pl");
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
             InitializeComponent();
             TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
