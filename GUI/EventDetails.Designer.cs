@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventDetails));
             EventName = new Label();
             EventTime = new Label();
             EventDesciption = new Label();
@@ -37,64 +38,43 @@
             // 
             // EventName
             // 
-            EventName.AutoSize = true;
-            EventName.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            EventName.Location = new Point(24, 25);
+            resources.ApplyResources(EventName, "EventName");
             EventName.Name = "EventName";
-            EventName.Size = new Size(210, 32);
-            EventName.TabIndex = 0;
-            EventName.Text = "Nazwa wydarzenia";
             // 
             // EventTime
             // 
-            EventTime.AutoSize = true;
-            EventTime.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            EventTime.Location = new Point(24, 67);
+            resources.ApplyResources(EventTime, "EventTime");
             EventTime.Name = "EventTime";
-            EventTime.Size = new Size(152, 25);
-            EventTime.TabIndex = 1;
-            EventTime.Text = "Czas wydarzenia";
             // 
             // EventDesciption
             // 
-            EventDesciption.AutoSize = true;
-            EventDesciption.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            EventDesciption.Location = new Point(24, 123);
+            resources.ApplyResources(EventDesciption, "EventDesciption");
             EventDesciption.Name = "EventDesciption";
-            EventDesciption.Size = new Size(151, 25);
-            EventDesciption.TabIndex = 2;
-            EventDesciption.Text = "Opis wydarzenia";
             // 
             // EditEventButton
             // 
-            EditEventButton.Location = new Point(576, 409);
+            resources.ApplyResources(EditEventButton, "EditEventButton");
             EditEventButton.Name = "EditEventButton";
-            EditEventButton.Size = new Size(94, 29);
-            EditEventButton.TabIndex = 3;
-            EditEventButton.Text = "Edytuj";
             EditEventButton.UseVisualStyleBackColor = true;
+            EditEventButton.Click += EditEventButton_Click;
             // 
             // DeleteEventButton
             // 
-            DeleteEventButton.Location = new Point(694, 409);
+            resources.ApplyResources(DeleteEventButton, "DeleteEventButton");
             DeleteEventButton.Name = "DeleteEventButton";
-            DeleteEventButton.Size = new Size(94, 29);
-            DeleteEventButton.TabIndex = 4;
-            DeleteEventButton.Text = "Usuń";
             DeleteEventButton.UseVisualStyleBackColor = true;
+            DeleteEventButton.Click += DeleteEventButton_Click;
             // 
             // EventDetails
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(DeleteEventButton);
             Controls.Add(EditEventButton);
             Controls.Add(EventDesciption);
             Controls.Add(EventTime);
             Controls.Add(EventName);
             Name = "EventDetails";
-            Text = "EventDetails";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -57,4 +57,168 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EventName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EventName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="EventName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 25</value>
+  </data>
+  <data name="EventName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 32</value>
+  </data>
+  <data name="EventName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EventName.Text" xml:space="preserve">
+    <value>&lt;&lt;Event name&gt;&gt;</value>
+  </data>
+  <data name="&gt;&gt;EventName.Name" xml:space="preserve">
+    <value>EventName</value>
+  </data>
+  <data name="&gt;&gt;EventName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EventName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EventName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EventTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EventTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="EventTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 67</value>
+  </data>
+  <data name="EventTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 25</value>
+  </data>
+  <data name="EventTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="EventTime.Text" xml:space="preserve">
+    <value>&lt;&lt;Event time&gt;&gt;</value>
+  </data>
+  <data name="&gt;&gt;EventTime.Name" xml:space="preserve">
+    <value>EventTime</value>
+  </data>
+  <data name="&gt;&gt;EventTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EventTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EventTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EventDesciption.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EventDesciption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="EventDesciption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 124</value>
+  </data>
+  <data name="EventDesciption.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>750, 0</value>
+  </data>
+  <data name="EventDesciption.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>750, 0</value>
+  </data>
+  <data name="EventDesciption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 25</value>
+  </data>
+  <data name="EventDesciption.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="EventDesciption.Text" xml:space="preserve">
+    <value>&lt;&lt;Description&gt;&gt;</value>
+  </data>
+  <data name="&gt;&gt;EventDesciption.Name" xml:space="preserve">
+    <value>EventDesciption</value>
+  </data>
+  <data name="&gt;&gt;EventDesciption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EventDesciption.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EventDesciption.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EditEventButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>576, 409</value>
+  </data>
+  <data name="EditEventButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="EditEventButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="EditEventButton.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;EditEventButton.Name" xml:space="preserve">
+    <value>EditEventButton</value>
+  </data>
+  <data name="&gt;&gt;EditEventButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditEventButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EditEventButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DeleteEventButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>694, 409</value>
+  </data>
+  <data name="DeleteEventButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="DeleteEventButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="DeleteEventButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;DeleteEventButton.Name" xml:space="preserve">
+    <value>DeleteEventButton</value>
+  </data>
+  <data name="&gt;&gt;DeleteEventButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteEventButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DeleteEventButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Event Details</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EventDetails</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
