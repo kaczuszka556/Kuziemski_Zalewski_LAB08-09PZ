@@ -175,6 +175,12 @@ namespace GUI
             ChangeCalendarMonth(-1);
         }
 
+        private void NewEventMenuButton_Click(object sender, EventArgs e)
+        {
+            AddEventWindow floatingWindow = new AddEventWindow();
+            floatingWindow.ShowDialog();
+
+        }
     }
 
     public class DayEventArgs

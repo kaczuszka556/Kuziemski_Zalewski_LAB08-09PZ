@@ -91,6 +91,7 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             label17 = new Label();
             label18 = new Label();
+            NewEventMenuButton = new ToolStripMenuItem();
             EventCalendar = new EventCalendar();
             menuStrip1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -112,7 +113,7 @@
             // 
             // plikToolStripMenuItem
             // 
-            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { opcjeToolStripMenuItem, wyjdźToolStripMenuItem });
+            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewEventMenuButton, opcjeToolStripMenuItem, wyjdźToolStripMenuItem });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             plikToolStripMenuItem.Size = new Size(46, 24);
             plikToolStripMenuItem.Text = "Plik";
@@ -120,13 +121,13 @@
             // opcjeToolStripMenuItem
             // 
             opcjeToolStripMenuItem.Name = "opcjeToolStripMenuItem";
-            opcjeToolStripMenuItem.Size = new Size(133, 26);
+            opcjeToolStripMenuItem.Size = new Size(210, 26);
             opcjeToolStripMenuItem.Text = "Opcje";
             // 
             // wyjdźToolStripMenuItem
             // 
             wyjdźToolStripMenuItem.Name = "wyjdźToolStripMenuItem";
-            wyjdźToolStripMenuItem.Size = new Size(133, 26);
+            wyjdźToolStripMenuItem.Size = new Size(210, 26);
             wyjdźToolStripMenuItem.Text = "Wyjdź";
             // 
             // tableLayoutPanel2
@@ -1115,6 +1116,13 @@
             label18.TabIndex = 9;
             label18.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // NewEventMenuButton
+            // 
+            NewEventMenuButton.Name = "NewEventMenuButton";
+            NewEventMenuButton.Size = new Size(224, 26);
+            NewEventMenuButton.Text = "Nowe wydarzenie";
+            NewEventMenuButton.Click += NewEventMenuButton_Click;
+            // 
             // EventCalendar
             // 
             EventCalendar.Location = new Point(390, 31);
@@ -1213,6 +1221,7 @@
         private CalendarDayLabel calendarDayLabel3;
         private CalendarDayLabel calendarDayLabel2;
         private CalendarDayLabel calendarDayLabel1;
+        private ToolStripMenuItem NewEventMenuButton;
         private EventCalendar EventCalendar;
     }
 }
