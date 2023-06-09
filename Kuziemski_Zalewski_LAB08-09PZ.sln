@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kuziemski_Zalewski_LAB08-09
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kuziemski_Zalewski_LAB08-09PZ_BKTests", "Kuziemski_Zalewski_LAB08-09PZ_BKTests\Kuziemski_Zalewski_LAB08-09PZ_BKTests.csproj", "{3EB8A1B8-3ED7-4501-85AB-AC6B1163FA13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test2", "Test2\Test2.csproj", "{7B83B19F-8888-44B3-9C58-AFE689C6ECCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test2", "Test2\Test2.csproj", "{7B83B19F-8888-44B3-9C58-AFE689C6ECCB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B1CA24F5-29DA-4DE8-BCEA-669760F78B53} = {B1CA24F5-29DA-4DE8-BCEA-669760F78B53}
 	EndProjectSection
