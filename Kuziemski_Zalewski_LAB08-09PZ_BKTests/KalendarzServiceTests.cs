@@ -61,7 +61,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Tests
             KalendarzService service = new KalendarzService();
             service.AddWydarznie(w1);
             service.DeleteAll();
-            Assert.AreEqual(0,service.LiczbaWydarzeń);
+            Assert.AreEqual(0, service.LiczbaWydarzeń);
         }
 
         [TestMethod()]
@@ -76,7 +76,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Tests
             int pom = service.LiczbaWydarzeń;
             Wydarzenie w3 = service.ZnajdżWydarzeniePoNazwie("Wydarzenie 1");
             service.DeleteWydarzeniePoId(w3.WydarzenieId);
-            Assert.AreEqual(1,pom-service.LiczbaWydarzeń);
+            Assert.AreEqual(1, pom - service.LiczbaWydarzeń);
         }
 
         [TestMethod()]
@@ -89,7 +89,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Tests
             service.AddWydarznie(w1);
             int pom = service.LiczbaWydarzeń;
             service.DeleteWydarzeniePoNazwie("Wydarzenie X");
-            Assert.AreEqual(1,pom-service.LiczbaWydarzeń);
+            Assert.AreEqual(1, pom - service.LiczbaWydarzeń);
         }
 
         [TestMethod()]
@@ -139,8 +139,18 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Tests
             KalendarzService service = new KalendarzService();
             service.DeleteAll();
             service.AddWydarznie(w1);
-            service.AddWydarznie(w2); 
-            Assert.AreEqual(2,service.ZnajdżWydarzeniaDnia(new DateOnly(2023, 10, 10)).Count());
+            service.AddWydarznie(w2);
+            Assert.AreEqual(2, service.ZnajdżWydarzeniaDnia(new DateOnly(2023, 10, 10)).Count());
         }
+
+       /* [TestMethod()]
+        public void JezykTest()
+        {
+            KalendarzService service = new KalendarzService();
+            String jezyk = "pl-PL";
+            service.UstawJezyk(jezyk);
+            String jezyk2 = service.PobierzJezyk();
+            Assert.Equals(jezyk,jezyk2);
+        }*/
     }
 }

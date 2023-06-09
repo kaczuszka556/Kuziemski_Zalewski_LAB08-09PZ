@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230526103037_InitialCreate")]
+    [Migration("20230609113128_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -19,6 +19,21 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");
+
+            modelBuilder.Entity("Kuziemski_Zalewski_LAB08_09PZ_BK.Preferencje", b =>
+                {
+                    b.Property<int>("PreferencjeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Jezyk")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PreferencjeId");
+
+                    b.ToTable("Preferencjes");
+                });
 
             modelBuilder.Entity("Kuziemski_Zalewski_LAB08_09PZ_BK.Wydarzenie", b =>
                 {

@@ -11,6 +11,7 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
     public class DatabaseContext : DbContext
     {
         public DbSet<Wydarzenie> Wydarzenia { get; set; }
+        public DbSet<Preferencje> Preferencjes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
