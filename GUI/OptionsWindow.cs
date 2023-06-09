@@ -33,12 +33,13 @@ namespace GUI
             InitializeComponent();
             List<TreeNode> allNodes = GetAllNodes(OptionsMenu.Nodes);
 
-            ResourceManager resourceManager = new ResourceManager(typeof(OptionsWindow));
+            ResourceManager resourceManager = Properties.Lang.ResourceManager;
 
             foreach (TreeNode item in allNodes)
             {
-                // TODO: Dodać tłumaczenia dla opcji do globalnego resource file np. Options.Menu.nazwa_node
-                item.Text = resourceManager.GetString("Options.Menu."+item.Name) != null ? resourceManager.GetString("Options.Menu." + item.Name) : "<<EMPTY>>";
+                
+                // TODO: Dodać tłumaczenia dla opcji do globalnego resource file np. OptionsMenu.nazwa_node
+                item.Text = resourceManager.GetString("OptionsMenu."+item.Name) != null ? resourceManager.GetString("OptionsMenu." + item.Name) : "<<EMPTY>>";
             }
 
 

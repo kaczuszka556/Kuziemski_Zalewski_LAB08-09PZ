@@ -97,7 +97,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="plikToolStripMenuItem" xml:space="preserve">
-    <value>File0</value>
+  <data name="OptionsMenu.GeneralParentNode" xml:space="preserve">
+    <value>General options</value>
+  </data>
+  <data name="OptionsMenu.LocalizationParentNode" xml:space="preserve">
+    <value>Localization</value>
+  </data>
+  <data name="OptionsMenu.LanguageChildNode" xml:space="preserve">
+    <value>Language</value>
   </data>
 </root>

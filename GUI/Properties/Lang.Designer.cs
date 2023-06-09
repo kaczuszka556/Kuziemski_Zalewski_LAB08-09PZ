@@ -61,11 +61,29 @@ namespace GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File0.
+        ///   Looks up a localized string similar to General options.
         /// </summary>
-        internal static string plikToolStripMenuItem {
+        internal static string OptionsMenu_GeneralParentNode {
             get {
-                return ResourceManager.GetString("plikToolStripMenuItem", resourceCulture);
+                return ResourceManager.GetString("OptionsMenu.GeneralParentNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string OptionsMenu_LanguageChildNode {
+            get {
+                return ResourceManager.GetString("OptionsMenu.LanguageChildNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Localization.
+        /// </summary>
+        internal static string OptionsMenu_LocalizationParentNode {
+            get {
+                return ResourceManager.GetString("OptionsMenu.LocalizationParentNode", resourceCulture);
             }
         }
     }

@@ -12,6 +12,19 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Preferencjes",
+                columns: table => new
+                {
+                    PreferencjeId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Jezyk = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Preferencjes", x => x.PreferencjeId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Wydarzenia",
                 columns: table => new
                 {
@@ -31,6 +44,9 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Preferencjes");
+
             migrationBuilder.DropTable(
                 name: "Wydarzenia");
         }
