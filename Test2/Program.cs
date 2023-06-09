@@ -7,12 +7,12 @@ namespace Test2
     {
         static void Main(string[] args)
         {
-            KalendarzService service = new KalendarzService();
-            String jezyk = "pl-PL";
+            PreferencjeService service = new PreferencjeService();
+            String jezyk = "pl";
             service.UstawJezyk(jezyk);
             String jezyk2 = service.PobierzJezyk();
             Console.WriteLine(jezyk2);
-            jezyk = "en-US";
+            jezyk = "en";
             service.UstawJezyk(jezyk);
             jezyk2 = service.PobierzJezyk();
             Console.WriteLine(jezyk2);
