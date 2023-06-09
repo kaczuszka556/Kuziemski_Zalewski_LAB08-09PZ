@@ -126,4 +126,19 @@
   <data name="OptionsMenu.LanguageChildNode" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="AddEventWindow.ValidationErrorTitle" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="AddEventWindow.FillAllFieldsMessage" xml:space="preserve">
+    <value>Please fill in all required fields.</value>
+  </data>
+  <data name="AddEventWindow.IncorrectDates" xml:space="preserve">
+    <value>End date can't be before start date.</value>
+  </data>
+  <data name="AddEventWindow.Success" xml:space="preserve">
+    <value>Event added succesfully!</value>
+  </data>
+  <data name="AddEventWindow.SuccessTitle" xml:space="preserve">
+    <value>Event added</value>
+  </data>
 </root>

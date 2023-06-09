@@ -61,6 +61,51 @@ namespace GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please fill in all required fields..
+        /// </summary>
+        internal static string AddEventWindow_FillAllFieldsMessage {
+            get {
+                return ResourceManager.GetString("AddEventWindow.FillAllFieldsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End date can&apos;t be before start date..
+        /// </summary>
+        internal static string AddEventWindow_IncorrectDates {
+            get {
+                return ResourceManager.GetString("AddEventWindow.IncorrectDates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event added succesfully!.
+        /// </summary>
+        internal static string AddEventWindow_Success {
+            get {
+                return ResourceManager.GetString("AddEventWindow.Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event added.
+        /// </summary>
+        internal static string AddEventWindow_SuccessTitle {
+            get {
+                return ResourceManager.GetString("AddEventWindow.SuccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation Error.
+        /// </summary>
+        internal static string AddEventWindow_ValidationErrorTitle {
+            get {
+                return ResourceManager.GetString("AddEventWindow.ValidationErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to General options.
         /// </summary>
         internal static string OptionsMenu_GeneralParentNode {
