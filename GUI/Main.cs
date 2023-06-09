@@ -195,7 +195,7 @@ namespace GUI
 
             optionsWindow.ShowDialog();
         }
-    
+
         private void NewEventMenuButton_Click(object sender, EventArgs e)
         {
             AddEventWindow floatingWindow = new AddEventWindow();
@@ -225,65 +225,65 @@ namespace GUI
     }
 
 
-    }
+}
 
-    public class Zegar : Panel, IDisposable
+public class Zegar : Panel, IDisposable
+{
+    System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
+    public Zegar()
     {
-        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-
-        public Zegar()
-        {
-            timer.Interval = 1000;
-            timer.Tick += new EventHandler(OnTick);
-            timer.Start();
-        }
-
-        private void OnTick(object sender, EventArgs e)
-        {
-            //get current time
-            int hh = DateTime.Now.Hour;
-            int mm = DateTime.Now.Minute;
-            int ss = DateTime.Now.Second;
-
-            //time
-            string time = "";
-
-            //padding leading zero
-            if (hh < 10)
-            {
-                time += "0" + hh;
-            }
-            else
-            {
-                time += hh;
-            }
-            time += ":";
-
-            if (mm < 10)
-            {
-                time += "0" + mm;
-            }
-            else
-            {
-                time += mm;
-            }
-            time += ":";
-
-            if (ss < 10)
-            {
-                time += "0" + ss;
-            }
-            else
-            {
-                time += ss;
-            }
-
-            //update label
-            this.Text = time;
-        }
-
-        public void Dispose()
-        {
-            timer.Dispose();
-        }
+        timer.Interval = 1000;
+        timer.Tick += new EventHandler(OnTick);
+        timer.Start();
     }
+
+    private void OnTick(object sender, EventArgs e)
+    {
+        //get current time
+        int hh = DateTime.Now.Hour;
+        int mm = DateTime.Now.Minute;
+        int ss = DateTime.Now.Second;
+
+        //time
+        string time = "";
+
+        //padding leading zero
+        if (hh < 10)
+        {
+            time += "0" + hh;
+        }
+        else
+        {
+            time += hh;
+        }
+        time += ":";
+
+        if (mm < 10)
+        {
+            time += "0" + mm;
+        }
+        else
+        {
+            time += mm;
+        }
+        time += ":";
+
+        if (ss < 10)
+        {
+            time += "0" + ss;
+        }
+        else
+        {
+            time += ss;
+        }
+
+        //update label
+        this.Text = time;
+    }
+
+    public void Dispose()
+    {
+        timer.Dispose();
+    }
+}

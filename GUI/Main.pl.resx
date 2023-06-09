@@ -92,4 +92,13 @@
   <data name="label9.Text" xml:space="preserve">
     <value>PT</value>
   </data>
+  <data name="wyjdźToolStripMenuItem.Text" xml:space="preserve">
+    <value>Wyjdź</value>
+  </data>
+  <data name="opcjeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+  <data name="NewEventMenuButton.Text" xml:space="preserve">
+    <value>Nowe wydarzenie</value>
+  </data>
 </root>
