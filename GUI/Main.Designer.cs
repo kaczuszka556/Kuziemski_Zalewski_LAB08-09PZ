@@ -121,13 +121,14 @@
             // opcjeToolStripMenuItem
             // 
             opcjeToolStripMenuItem.Name = "opcjeToolStripMenuItem";
-            opcjeToolStripMenuItem.Size = new Size(210, 26);
+            opcjeToolStripMenuItem.Size = new Size(224, 26);
             opcjeToolStripMenuItem.Text = "Opcje";
+            opcjeToolStripMenuItem.Click += opcjeToolStripMenuItem_Click;
             // 
             // wyjdźToolStripMenuItem
             // 
             wyjdźToolStripMenuItem.Name = "wyjdźToolStripMenuItem";
-            wyjdźToolStripMenuItem.Size = new Size(210, 26);
+            wyjdźToolStripMenuItem.Size = new Size(224, 26);
             wyjdźToolStripMenuItem.Text = "Wyjdź";
             // 
             // tableLayoutPanel2

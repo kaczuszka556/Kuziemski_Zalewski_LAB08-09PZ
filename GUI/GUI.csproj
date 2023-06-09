@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Kuziemski_Zalewski_LAB08-09PZ_BK\Kuziemski_Zalewski_LAB08-09PZ_BK.csproj" />
   </ItemGroup>
 

@@ -175,6 +175,13 @@ namespace GUI
             ChangeCalendarMonth(-1);
         }
 
+        private void opcjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OptionsWindow optionsWindow = new OptionsWindow();
+
+            optionsWindow.ShowDialog();
+        }
+    
         private void NewEventMenuButton_Click(object sender, EventArgs e)
         {
             AddEventWindow floatingWindow = new AddEventWindow();
