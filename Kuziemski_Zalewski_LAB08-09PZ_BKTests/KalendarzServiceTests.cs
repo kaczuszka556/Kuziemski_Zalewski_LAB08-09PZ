@@ -143,14 +143,5 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK.Tests
             Assert.AreEqual(2, service.ZnajdżWydarzeniaDnia(new DateOnly(2023, 10, 10)).Count());
         }
 
-       /* [TestMethod()]
-        public void JezykTest()
-        {
-            KalendarzService service = new KalendarzService();
-            String jezyk = "pl-PL";
-            service.UstawJezyk(jezyk);
-            String jezyk2 = service.PobierzJezyk();
-            Assert.Equals(jezyk,jezyk2);
-        }*/
     }
 }
