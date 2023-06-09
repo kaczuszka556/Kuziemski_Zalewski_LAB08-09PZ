@@ -93,6 +93,7 @@
             label18 = new Label();
             NewEventMenuButton = new ToolStripMenuItem();
             EventCalendar = new EventCalendar();
+            TimeDisplay = new TimeDisplay();
             menuStrip1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -139,7 +140,7 @@
             tableLayoutPanel2.Controls.Add(panel1, 0, 0);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 1);
             tableLayoutPanel2.Controls.Add(LeftKalendarzTable, 0, 2);
-            tableLayoutPanel2.Location = new Point(24, 31);
+            tableLayoutPanel2.Location = new Point(24, 162);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
@@ -1117,6 +1118,13 @@
             label18.TabIndex = 9;
             label18.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // TimeDisplay
+            // 
+            TimeDisplay.Location = new Point(24, 31);
+            TimeDisplay.Name = "TimeDisplay";
+            TimeDisplay.Size = new Size(360, 125);
+            TimeDisplay.TabIndex = 4;
+            // 
             // NewEventMenuButton
             // 
             NewEventMenuButton.Name = "NewEventMenuButton";
@@ -1136,6 +1144,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1547, 765);
+            Controls.Add(TimeDisplay);
             Controls.Add(EventCalendar);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(menuStrip1);
@@ -1224,5 +1233,6 @@
         private CalendarDayLabel calendarDayLabel1;
         private ToolStripMenuItem NewEventMenuButton;
         private EventCalendar EventCalendar;
+        private TimeDisplay TimeDisplay;
     }
 }
