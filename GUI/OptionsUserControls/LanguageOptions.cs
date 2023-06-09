@@ -14,12 +14,17 @@ namespace GUI.OptionsUserControls
     {
         public LanguageOptions()
         {
+            // TODO: Zaciągać z bazy język i tu go ustawiać
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo("pl");
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo("pl");
             InitializeComponent();
 
             List<Language> languages = new List<Language>
             {
-                new Language("Polish", "pl-PL"),
-                new Language("English", "en-EN")
+                new Language("Polski", "pl"),
+                new Language("English", "en")
             };
 
             LanguageSelect.DataSource = languages;
@@ -27,6 +32,8 @@ namespace GUI.OptionsUserControls
             LanguageSelect.SelectedIndex = 0;
             LanguageSelect.ValueMember = "Code";
         }
+
+       
     }
 
     public class Language

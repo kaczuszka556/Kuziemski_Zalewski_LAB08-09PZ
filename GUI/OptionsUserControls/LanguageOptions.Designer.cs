@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageOptions));
             LanguageSelect = new ComboBox();
             LanguageSelectLabel = new Label();
             SuspendLayout();
@@ -35,31 +36,21 @@
             // LanguageSelect
             // 
             LanguageSelect.FormattingEnabled = true;
-            LanguageSelect.Location = new Point(122, 30);
+            resources.ApplyResources(LanguageSelect, "LanguageSelect");
             LanguageSelect.Name = "LanguageSelect";
-            LanguageSelect.Size = new Size(151, 28);
-            LanguageSelect.TabIndex = 0;
             // 
             // LanguageSelectLabel
             // 
-            LanguageSelectLabel.AutoSize = true;
-            LanguageSelectLabel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LanguageSelectLabel.Location = new Point(27, 31);
+            resources.ApplyResources(LanguageSelectLabel, "LanguageSelectLabel");
             LanguageSelectLabel.Name = "LanguageSelectLabel";
-            LanguageSelectLabel.Size = new Size(89, 23);
-            LanguageSelectLabel.TabIndex = 1;
-            LanguageSelectLabel.Text = "Language:";
             // 
             // LanguageOptions
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(LanguageSelectLabel);
             Controls.Add(LanguageSelect);
-            MaximumSize = new Size(517, 426);
-            MinimumSize = new Size(517, 426);
             Name = "LanguageOptions";
-            Size = new Size(517, 426);
             ResumeLayout(false);
             PerformLayout();
         }
