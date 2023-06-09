@@ -13,7 +13,7 @@ namespace GUI
         public Main()
         {
             InitializeComponent();
-            this.Text = "Kalendarz";
+            TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
 
@@ -138,6 +138,14 @@ namespace GUI
         private void LeftKalendarzTable_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ChangeToCurrentDate()
+        {
+            CurrentDate = DateTime.Now;
+            HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
+            LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
+            UpdateEventCalendarDayLabels();
         }
 
         private void LeftKalendarzTable_CellPaint(object sender, TableLayoutCellPaintEventArgs e)

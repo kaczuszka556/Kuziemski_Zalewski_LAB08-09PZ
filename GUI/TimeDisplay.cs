@@ -15,6 +15,8 @@ namespace GUI
     {
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
+        public delegate void CurrentDateLinkClicked();
+        public event CurrentDateLinkClicked OnCurrentDateLinkClicked;
         public TimeDisplay()
         {
             InitializeComponent();
@@ -62,6 +64,11 @@ namespace GUI
         public void Dispose()
         {
             timer.Dispose();
+        }
+
+        private void TimeDisplayDate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OnCurrentDateLinkClicked();
         }
     }
 }

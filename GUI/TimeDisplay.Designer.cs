@@ -52,6 +52,7 @@
             TimeDisplayDate.TabIndex = 1;
             TimeDisplayDate.TabStop = true;
             TimeDisplayDate.Text = "dddd, dd MMMM yyyy";
+            TimeDisplayDate.LinkClicked += TimeDisplayDate_LinkClicked;
             // 
             // TimeDisplay
             // 

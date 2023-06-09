@@ -99,7 +99,7 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             label17 = new Label();
             label18 = new Label();
-            timeDisplay1 = new TimeDisplay();
+            TimeDisplay = new TimeDisplay();
             menuStrip1.SuspendLayout();
             EventCalendar.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -1220,19 +1220,19 @@
             label18.TabIndex = 9;
             label18.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // timeDisplay1
+            // TimeDisplay
             // 
-            timeDisplay1.Location = new Point(24, 31);
-            timeDisplay1.Name = "timeDisplay1";
-            timeDisplay1.Size = new Size(360, 125);
-            timeDisplay1.TabIndex = 4;
+            TimeDisplay.Location = new Point(24, 31);
+            TimeDisplay.Name = "TimeDisplay";
+            TimeDisplay.Size = new Size(360, 125);
+            TimeDisplay.TabIndex = 4;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1547, 765);
-            Controls.Add(timeDisplay1);
+            Controls.Add(TimeDisplay);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(EventCalendar);
             Controls.Add(menuStrip1);
@@ -1329,6 +1329,6 @@
         private EventCalendarDayLabel EventCalendarDay3;
         private EventCalendarDayLabel EventCalendarDay2;
         private EventCalendarDayLabel EventCalendarDay1;
-        private TimeDisplay timeDisplay1;
+        private TimeDisplay TimeDisplay;
     }
 }
