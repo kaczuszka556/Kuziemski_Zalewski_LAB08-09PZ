@@ -13,17 +13,26 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             using (var db = new DatabaseContext())
             {
                 db.Database.EnsureCreated();
-                //db.SaveChanges();
                 if (jezyk != "pl" && jezyk != "en")
                 {
                     throw new NieprawidlowyJezykException();
                 }
 
-                db.Preferencjes.RemoveRange(db.Preferencjes.Where(p => true));
-                db.SaveChanges();
-                Preferencje p = new Preferencje { Jezyk = jezyk };
-                db.Preferencjes.Add(p);
-                db.SaveChanges();
+
+                if (db.Preferencjes.Count(x => true) == 0)
+                {
+                    Preferencje dp = new Preferencje { PreferencjeId = 1, Jezyk = "pl" };
+                    db.Preferencjes.Add(dp);
+                    db.SaveChanges();
+                }
+
+                else
+                {
+                    Preferencje pom = db.Preferencjes.Where(p => true).First();
+                    pom.Jezyk = jezyk;
+                    db.SaveChanges();
+                }
+
             }
         }
 
@@ -32,6 +41,13 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
             using (var db = new DatabaseContext())
             {
                 db.Database.EnsureCreated();
+
+                if (db.Preferencjes.Count(x => true) == 0)
+                {
+                    Preferencje dp = new Preferencje { PreferencjeId = 1, Jezyk = "pl" };
+                    db.Preferencjes.Add(dp);
+                    db.SaveChanges();
+                }
                 Preferencje p = db.Preferencjes.Take(1).First();
                 return p.Jezyk;
             }
