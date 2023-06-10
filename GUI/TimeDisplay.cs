@@ -26,6 +26,20 @@ namespace GUI
             
         }
 
+        private void UpdateLanguage()
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+
+            foreach (Control item in Controls)
+            {
+                resources.ApplyResources(item, item.Name);
+
+            }
+        }
         public void Start()
         {
             PreferencjeService = new PreferencjeService();
@@ -34,6 +48,9 @@ namespace GUI
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+
+            GlobalEventManager.OnLanguageChanged += UpdateLanguage;
+
             UpdateTime();
             timer.Interval = 1000;
             timer.Tick += new EventHandler(OnTick);
@@ -77,6 +94,7 @@ namespace GUI
 
         public void Dispose()
         {
+            GlobalEventManager.OnLanguageChanged -= UpdateLanguage;
             timer.Dispose();
         }
 

@@ -1,3 +1,4 @@
+using GUI.Extensions;
 using Kuziemski_Zalewski_LAB08_09PZ_BK;
 using System.Diagnostics;
 using System.Net;
@@ -35,7 +36,19 @@ namespace GUI
 
         private void UpdateLanguage()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+ 
+            IEnumerable<Control> list = this.GetAllControls();
+            foreach (Control item in list)
+            {
+                resources.ApplyResources(item, item.Name);
+            }
+            LeftMiesiacRokLabel.Text = new DateTime(CurrentDate.Year, CurrentDate.Month, 1).ToString("MMMM yyyy").ToUpper();
         }
 
         public void Dispose()

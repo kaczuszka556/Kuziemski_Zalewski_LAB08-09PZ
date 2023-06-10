@@ -1,4 +1,5 @@
-﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
+﻿using GUI.Extensions;
+using Kuziemski_Zalewski_LAB08_09PZ_BK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace GUI.OptionsUserControls
 {
-    public partial class LanguageOptions : UserControl
+    public partial class LanguageOptions : UserControl, IDisposable
     {
         PreferencjeService PreferencjeService;
         public LanguageOptions()
@@ -26,6 +27,8 @@ namespace GUI.OptionsUserControls
 
             InitializeComponent();
 
+            GlobalEventManager.OnLanguageChanged += UpdateLanguage;
+
             List<Language> languages = new List<Language>
             {
                 new Language("Polski", "pl"),
@@ -38,11 +41,33 @@ namespace GUI.OptionsUserControls
             LanguageSelect.ValueMember = "Code";
         }
 
+        private void UpdateLanguage()
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageOptions));
+
+            IEnumerable<Control> list = this.GetAllControls();
+            foreach (Control item in list)
+            {
+                resources.ApplyResources(item, item.Name);
+            }
+        }
+
+        public void Dispose()
+        {
+            GlobalEventManager.OnLanguageChanged -= UpdateLanguage;
+
+        }
+
         private void LanguageSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             Language language = LanguageSelect.SelectedItem as Language;
             PreferencjeService.UstawJezyk(language.Code);
-            
+            GlobalEventManager.TriggerOnLanguageChanged();
             // TODO: Aktualizacja tekstów na nowe tłumaczenie od razu po zmianie języka
             //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageOptions));
             //resources.ApplyResources(LanguageSelectLabel, "LanguageSelectLabel");

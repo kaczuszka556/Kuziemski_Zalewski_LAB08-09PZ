@@ -1,4 +1,5 @@
-﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
+﻿using GUI.Extensions;
+using Kuziemski_Zalewski_LAB08_09PZ_BK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI
 {
-    public partial class OptionsWindow : Form
+    public partial class OptionsWindow : Form, IDisposable
     {
         private enum OptionType
         {
@@ -34,17 +35,34 @@ namespace GUI
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
             InitializeComponent();
+
+            GlobalEventManager.OnLanguageChanged += UpdateLanguage;
+
+
+        }
+
+        private void UpdateLanguage()
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+
             List<TreeNode> allNodes = GetAllNodes(OptionsMenu.Nodes);
 
             ResourceManager resourceManager = Properties.Lang.ResourceManager;
 
             foreach (TreeNode item in allNodes)
             {
-                
-                // TODO: Dodać tłumaczenia dla opcji do globalnego resource file np. OptionsMenu.nazwa_node
-                item.Text = resourceManager.GetString("OptionsMenu."+item.Name) != null ? resourceManager.GetString("OptionsMenu." + item.Name) : "<<EMPTY>>";
-            }
 
+                // TODO: Dodać tłumaczenia dla opcji do globalnego resource file np. OptionsMenu.nazwa_node
+                item.Text = resourceManager.GetString("OptionsMenu." + item.Name) != null ? resourceManager.GetString("OptionsMenu." + item.Name) : "<<EMPTY>>";
+            }
+        }
+
+        public void Dispose()
+        {
+            GlobalEventManager.OnLanguageChanged -= UpdateLanguage;
 
         }
 
