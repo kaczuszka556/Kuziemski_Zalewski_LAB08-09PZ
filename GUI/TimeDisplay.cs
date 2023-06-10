@@ -14,23 +14,26 @@ namespace GUI
 {
     public partial class TimeDisplay : UserControl, IDisposable
     {
-        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timer;
 
         public delegate void CurrentDateLinkClicked();
         public event CurrentDateLinkClicked OnCurrentDateLinkClicked;
         private PreferencjeService PreferencjeService;
         public TimeDisplay()
         {
+            InitializeComponent();
+          
+            
+        }
 
-
+        public void Start()
+        {
             PreferencjeService = new PreferencjeService();
-
+            timer = new System.Windows.Forms.Timer();
             System.Threading.Thread.CurrentThread.CurrentCulture =
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
-
-            InitializeComponent();
             UpdateTime();
             timer.Interval = 1000;
             timer.Tick += new EventHandler(OnTick);

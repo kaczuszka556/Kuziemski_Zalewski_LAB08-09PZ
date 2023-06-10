@@ -22,6 +22,7 @@ namespace GUI
 
             InitializeComponent();
             TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
+            TimeDisplay.Start();
             HighlightedRow = Narzêdziowa.KtóryTydzieñ(new DateOnly(CurrentDate.Year, CurrentDate.Month, CurrentDate.Day)) - 1;
             LeftKalendarzWypiszDni(CurrentDate.Month, CurrentDate.Year);
 

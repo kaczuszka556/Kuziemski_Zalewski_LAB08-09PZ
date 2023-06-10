@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -60,22 +59,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="NewEventMenuButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 26</value>
+    <value>162, 26</value>
   </data>
   <data name="opcjeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 26</value>
+    <value>162, 26</value>
   </data>
   <data name="opcjeToolStripMenuItem.Text" xml:space="preserve">
     <value>Options</value>
   </data>
   <data name="wyjdźToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 26</value>
+    <value>162, 26</value>
   </data>
   <data name="wyjdźToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="plikToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="LeftMiesiacRokLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 20</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>FRI</value>
@@ -97,11 +99,5 @@
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>WED</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Calendar</value>
-  </data>
-  <data name="NewEventMenuButton.Text" xml:space="preserve">
-    <value>New Event</value>
   </data>
 </root>
