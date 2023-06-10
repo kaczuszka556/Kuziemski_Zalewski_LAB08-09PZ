@@ -25,6 +25,7 @@ namespace GUI
             PreferencjeService = new PreferencjeService();
             resources = new ComponentResourceManager(typeof(AddEventWindow));
 
+            Wydarzenie = new Wydarzenie();
 
             System.Threading.Thread.CurrentThread.CurrentCulture =
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());

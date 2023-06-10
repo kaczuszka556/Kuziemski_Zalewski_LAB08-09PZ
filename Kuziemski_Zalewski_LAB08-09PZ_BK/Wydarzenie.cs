@@ -16,9 +16,11 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
     public DateTime Poczatek { get; set; }
     public DateTime Koniec { get; set; }
 
+        public Wydarzenie()
+        {
+        }
 
-
-    public override string ToString()
+        public override string ToString()
     {
       return $"Id:{WydarzenieId}, Nazwa: {Nazwa}, Opis: {Opis}, Początek: {Poczatek}, Koniec: {Koniec}";
     }

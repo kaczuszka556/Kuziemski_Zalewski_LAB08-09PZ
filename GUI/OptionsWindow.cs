@@ -29,10 +29,10 @@ namespace GUI
 
             PreferencjeService = new PreferencjeService();
 
-            UpdateLanguage();
+            
 
             InitializeComponent();
-
+            UpdateLanguage();
             GlobalEventManager.OnLanguageChanged += UpdateLanguage;
 
 
