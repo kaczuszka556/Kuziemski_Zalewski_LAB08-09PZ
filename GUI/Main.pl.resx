@@ -101,4 +101,25 @@
   <data name="NewEventMenuButton.Text" xml:space="preserve">
     <value>Nowe wydarzenie</value>
   </data>
+  <data name="MondayLabel.Text" xml:space="preserve">
+    <value>PON</value>
+  </data>
+  <data name="WednesdayLabel.Text" xml:space="preserve">
+    <value>ŚR</value>
+  </data>
+  <data name="TuesdayLabel.Text" xml:space="preserve">
+    <value>WT</value>
+  </data>
+  <data name="ThursdayLabel.Text" xml:space="preserve">
+    <value>CZW</value>
+  </data>
+  <data name="SundayLabel.Text" xml:space="preserve">
+    <value>NIE</value>
+  </data>
+  <data name="SaturdayLabel.Text" xml:space="preserve">
+    <value>SOB</value>
+  </data>
+  <data name="FridayLabel.Text" xml:space="preserve">
+    <value>PT</value>
+  </data>
 </root>

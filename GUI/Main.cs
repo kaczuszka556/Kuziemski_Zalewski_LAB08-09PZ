@@ -4,7 +4,7 @@ using System.Net;
 using System.Threading.Tasks;
 namespace GUI
 {
-    public partial class Main : Form
+    public partial class Main : Form, IDisposable
     {
         private DateTime CurrentDate = DateTime.Now;
         private int HighlightedRow = 0;
@@ -20,6 +20,8 @@ namespace GUI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
+            GlobalEventManager.OnLanguageChanged += UpdateLanguage;
+
             InitializeComponent();
             TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
             TimeDisplay.Start();
@@ -29,6 +31,16 @@ namespace GUI
             EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
 
 
+        }
+
+        private void UpdateLanguage()
+        {
+
+        }
+
+        public void Dispose()
+        {
+            GlobalEventManager.OnLanguageChanged -= UpdateLanguage;
         }
 
         private void LeftKalendarzWypiszDni(int miesiac, int rok)
@@ -231,63 +243,4 @@ namespace GUI
 
 }
 
-public class Zegar : Panel, IDisposable
-{
-    System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
-    public Zegar()
-    {
-        timer.Interval = 1000;
-        timer.Tick += new EventHandler(OnTick);
-        timer.Start();
-    }
-
-    private void OnTick(object sender, EventArgs e)
-    {
-        //get current time
-        int hh = DateTime.Now.Hour;
-        int mm = DateTime.Now.Minute;
-        int ss = DateTime.Now.Second;
-
-        //time
-        string time = "";
-
-        //padding leading zero
-        if (hh < 10)
-        {
-            time += "0" + hh;
-        }
-        else
-        {
-            time += hh;
-        }
-        time += ":";
-
-        if (mm < 10)
-        {
-            time += "0" + mm;
-        }
-        else
-        {
-            time += mm;
-        }
-        time += ":";
-
-        if (ss < 10)
-        {
-            time += "0" + ss;
-        }
-        else
-        {
-            time += ss;
-        }
-
-        //update label
-        this.Text = time;
-    }
-
-    public void Dispose()
-    {
-        timer.Dispose();
-    }
-}

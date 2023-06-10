@@ -1,4 +1,5 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -99,5 +100,32 @@
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>WED</value>
+  </data>
+  <data name="MondayLabel.Text" xml:space="preserve">
+    <value>MON</value>
+  </data>
+  <data name="NewEventMenuButton.Text" xml:space="preserve">
+    <value>New Event</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="WednesdayLabel.Text" xml:space="preserve">
+    <value>WED</value>
+  </data>
+  <data name="TuesdayLabel.Text" xml:space="preserve">
+    <value>TUES</value>
+  </data>
+  <data name="ThursdayLabel.Text" xml:space="preserve">
+    <value>THU</value>
+  </data>
+  <data name="SundayLabel.Text" xml:space="preserve">
+    <value>SUN</value>
+  </data>
+  <data name="SaturdayLabel.Text" xml:space="preserve">
+    <value>SAT</value>
+  </data>
+  <data name="FridayLabel.Text" xml:space="preserve">
+    <value>FRI</value>
   </data>
 </root>

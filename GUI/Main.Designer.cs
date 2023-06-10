@@ -40,13 +40,13 @@
             LeftCalendarNextMonth = new Button();
             LeftCalendarPreviousMonth = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
+            FridayLabel = new Label();
+            SaturdayLabel = new Label();
+            SundayLabel = new Label();
+            ThursdayLabel = new Label();
+            MondayLabel = new Label();
+            TuesdayLabel = new Label();
+            WednesdayLabel = new Label();
             LeftKalendarzTable = new TableLayoutPanel();
             calendarDayLabel42 = new CalendarDayLabel();
             calendarDayLabel41 = new CalendarDayLabel();
@@ -105,33 +105,33 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { plikToolStripMenuItem });
+            resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.Name = "menuStrip1";
             // 
             // plikToolStripMenuItem
             // 
-            resources.ApplyResources(plikToolStripMenuItem, "plikToolStripMenuItem");
             plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewEventMenuButton, opcjeToolStripMenuItem, wyjdźToolStripMenuItem });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
+            resources.ApplyResources(plikToolStripMenuItem, "plikToolStripMenuItem");
             // 
             // NewEventMenuButton
             // 
-            resources.ApplyResources(NewEventMenuButton, "NewEventMenuButton");
             NewEventMenuButton.Name = "NewEventMenuButton";
+            resources.ApplyResources(NewEventMenuButton, "NewEventMenuButton");
             NewEventMenuButton.Click += NewEventMenuButton_Click;
             // 
             // opcjeToolStripMenuItem
             // 
-            resources.ApplyResources(opcjeToolStripMenuItem, "opcjeToolStripMenuItem");
             opcjeToolStripMenuItem.Name = "opcjeToolStripMenuItem";
+            resources.ApplyResources(opcjeToolStripMenuItem, "opcjeToolStripMenuItem");
             opcjeToolStripMenuItem.Click += opcjeToolStripMenuItem_Click;
             // 
             // wyjdźToolStripMenuItem
             // 
-            resources.ApplyResources(wyjdźToolStripMenuItem, "wyjdźToolStripMenuItem");
             wyjdźToolStripMenuItem.Name = "wyjdźToolStripMenuItem";
+            resources.ApplyResources(wyjdźToolStripMenuItem, "wyjdźToolStripMenuItem");
             // 
             // tableLayoutPanel2
             // 
@@ -143,10 +143,10 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(panel1, "panel1");
             panel1.Controls.Add(LeftMiesiacRokLabel);
             panel1.Controls.Add(LeftCalendarNextMonth);
             panel1.Controls.Add(LeftCalendarPreviousMonth);
+            resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
             // 
             // LeftMiesiacRokLabel
@@ -171,50 +171,50 @@
             // tableLayoutPanel3
             // 
             resources.ApplyResources(tableLayoutPanel3, "tableLayoutPanel3");
-            tableLayoutPanel3.Controls.Add(label9, 0, 0);
-            tableLayoutPanel3.Controls.Add(label8, 0, 0);
-            tableLayoutPanel3.Controls.Add(label7, 0, 0);
-            tableLayoutPanel3.Controls.Add(label6, 0, 0);
-            tableLayoutPanel3.Controls.Add(label5, 0, 0);
-            tableLayoutPanel3.Controls.Add(label4, 0, 0);
-            tableLayoutPanel3.Controls.Add(label3, 0, 0);
+            tableLayoutPanel3.Controls.Add(FridayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(SaturdayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(SundayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(ThursdayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(MondayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(TuesdayLabel, 0, 0);
+            tableLayoutPanel3.Controls.Add(WednesdayLabel, 0, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
-            // label9
+            // FridayLabel
             // 
-            resources.ApplyResources(label9, "label9");
-            label9.Name = "label9";
+            resources.ApplyResources(FridayLabel, "FridayLabel");
+            FridayLabel.Name = "FridayLabel";
             // 
-            // label8
+            // SaturdayLabel
             // 
-            resources.ApplyResources(label8, "label8");
-            label8.Name = "label8";
+            resources.ApplyResources(SaturdayLabel, "SaturdayLabel");
+            SaturdayLabel.Name = "SaturdayLabel";
             // 
-            // label7
+            // SundayLabel
             // 
-            resources.ApplyResources(label7, "label7");
-            label7.ForeColor = Color.Red;
-            label7.Name = "label7";
+            resources.ApplyResources(SundayLabel, "SundayLabel");
+            SundayLabel.ForeColor = Color.Red;
+            SundayLabel.Name = "SundayLabel";
             // 
-            // label6
+            // ThursdayLabel
             // 
-            resources.ApplyResources(label6, "label6");
-            label6.Name = "label6";
+            resources.ApplyResources(ThursdayLabel, "ThursdayLabel");
+            ThursdayLabel.Name = "ThursdayLabel";
             // 
-            // label5
+            // MondayLabel
             // 
-            resources.ApplyResources(label5, "label5");
-            label5.Name = "label5";
+            resources.ApplyResources(MondayLabel, "MondayLabel");
+            MondayLabel.Name = "MondayLabel";
             // 
-            // label4
+            // TuesdayLabel
             // 
-            resources.ApplyResources(label4, "label4");
-            label4.Name = "label4";
+            resources.ApplyResources(TuesdayLabel, "TuesdayLabel");
+            TuesdayLabel.Name = "TuesdayLabel";
             // 
-            // label3
+            // WednesdayLabel
             // 
-            resources.ApplyResources(label3, "label3");
-            label3.Name = "label3";
+            resources.ApplyResources(WednesdayLabel, "WednesdayLabel");
+            WednesdayLabel.Name = "WednesdayLabel";
             // 
             // LeftKalendarzTable
             // 
@@ -829,13 +829,13 @@
         private ToolStripMenuItem wyjdźToolStripMenuItem;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
-        private Label label3;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
+        private Label WednesdayLabel;
+        private Label FridayLabel;
+        private Label SaturdayLabel;
+        private Label SundayLabel;
+        private Label ThursdayLabel;
+        private Label MondayLabel;
+        private Label TuesdayLabel;
         private Panel panel1;
         private Label LeftMiesiacRokLabel;
         private Button LeftCalendarNextMonth;
