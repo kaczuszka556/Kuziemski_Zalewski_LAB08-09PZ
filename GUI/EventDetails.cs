@@ -37,12 +37,15 @@ namespace GUI
             KalendarzService kalendarzService = new KalendarzService();
 
             kalendarzService.DeleteWydarzeniePoId(Wydarzenie.WydarzenieId);
+            GlobalEventManager.TriggerOnEventCalendarChanged();
             Close();
         }
 
         private void EditEventButton_Click(object sender, EventArgs e)
         {
-
+            AddEventWindow addEventWindow = new AddEventWindow(Wydarzenie);
+            addEventWindow.ShowDialog();
+            Close();
         }
     }
 }

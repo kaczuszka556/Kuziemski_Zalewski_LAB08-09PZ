@@ -22,6 +22,7 @@ namespace GUI
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
             GlobalEventManager.OnLanguageChanged += UpdateLanguage;
+            GlobalEventManager.OnEventCalendarChanged += UpdateCalendar;
 
             InitializeComponent();
             TimeDisplay.OnCurrentDateLinkClicked += ChangeToCurrentDate;
@@ -51,9 +52,16 @@ namespace GUI
             LeftMiesiacRokLabel.Text = new DateTime(CurrentDate.Year, CurrentDate.Month, 1).ToString("MMMM yyyy").ToUpper();
         }
 
+        private void UpdateCalendar()
+        {
+            EventCalendar.UpdateEventCalendarDayLabels(CurrentDate.Year, CurrentDate.Month, HighlightedRow + 1);
+        }
+
         public void Dispose()
         {
             GlobalEventManager.OnLanguageChanged -= UpdateLanguage;
+            GlobalEventManager.OnEventCalendarChanged -= UpdateCalendar;
+
         }
 
         private void LeftKalendarzWypiszDni(int miesiac, int rok)

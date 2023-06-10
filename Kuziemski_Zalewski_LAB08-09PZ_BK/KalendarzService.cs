@@ -21,20 +21,21 @@ namespace Kuziemski_Zalewski_LAB08_09PZ_BK
                 using (var db = new DatabaseContext())
                 {
                     db.Database.EnsureCreated();
-                    if (db.Wydarzenia.All(p => p.Nazwa != w.Nazwa))
-                    {
-                        db.Wydarzenia.Add(w);
-                        db.SaveChanges();
 
-                        foreach (var p in db.Wydarzenia)
-                        {
-                            Console.WriteLine(p.ToString());
-                        }
+                    var result = db.Wydarzenia.SingleOrDefault(wyd => wyd.WydarzenieId == w.WydarzenieId);
+                    if (result != null)
+                    {
+                        result.Nazwa = w.Nazwa;
+                        result.Poczatek = w.Poczatek;
+                        result.Opis = w.Opis;
+                        result.Koniec = w.Koniec;
                     }
                     else
-                    {
-                        throw new NazwaZajętaException();
-                    }
+                        db.Wydarzenia.Add(w);
+
+                    db.SaveChanges();
+
+                        
                 }
             }
         }

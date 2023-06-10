@@ -17,6 +17,9 @@ namespace GUI
         ComponentResourceManager resources;
         ResourceManager GlobalLocalization = Properties.Lang.ResourceManager;
 
+        private bool EditMode = false;
+        private Wydarzenie Wydarzenie;
+        
         public AddEventWindow()
         {
             PreferencjeService = new PreferencjeService();
@@ -32,6 +35,19 @@ namespace GUI
             InitializeComponent();
         }
 
+        public AddEventWindow(Wydarzenie wydarzenie) :this()
+        {
+            Wydarzenie = wydarzenie;
+            StartDatePicker.Value = wydarzenie.Poczatek;
+            EndDatePicker.Value = wydarzenie.Koniec;
+            StartTimePicker.Value = wydarzenie.Poczatek;
+            EndTimePicker.Value = wydarzenie.Koniec;
+            EventDescriptionInput.Text = wydarzenie.Opis;
+            EventNameInput.Text = wydarzenie.Nazwa;
+            EditMode = true;
+
+        }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
 
@@ -42,9 +58,9 @@ namespace GUI
             }
 
             DateTime StartDate = StartDatePicker.Value.Date;
-            StartDate = StartDate.Date.Add(StartTimePicker.Value.TimeOfDay);
+            Wydarzenie.Poczatek= StartDate.Date.Add(StartTimePicker.Value.TimeOfDay);
             DateTime EndDate = EndDatePicker.Value.Date;
-            EndDate = EndDate.Date.Add(EndTimePicker.Value.TimeOfDay);
+            Wydarzenie.Koniec = EndDate.Date.Add(EndTimePicker.Value.TimeOfDay);
 
             if (EndDate < StartDate)
             {
@@ -52,10 +68,14 @@ namespace GUI
                 return;
             }
 
+            Wydarzenie.Nazwa = EventNameInput.Text;
+            Wydarzenie.Opis = EventDescriptionInput.Text;
+
             KalendarzService kalendarzService = new KalendarzService();
-            kalendarzService.AddWydarznie(new Wydarzenie(EventNameInput.Text, EventDescriptionInput.Text, StartDate, EndDate));
+            kalendarzService.AddWydarznie(Wydarzenie);
 
             MessageBox.Show(GlobalLocalization.GetString("AddEventWindow.Success"), GlobalLocalization.GetString("AddEventWindow.SuccessTitle"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            GlobalEventManager.TriggerOnEventCalendarChanged();
             this.Close();
         }
     }

@@ -29,10 +29,7 @@ namespace GUI
 
             PreferencjeService = new PreferencjeService();
 
-            System.Threading.Thread.CurrentThread.CurrentCulture =
-                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
-            System.Threading.Thread.CurrentThread.CurrentUICulture =
-                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            UpdateLanguage();
 
             InitializeComponent();
 
@@ -54,8 +51,6 @@ namespace GUI
 
             foreach (TreeNode item in allNodes)
             {
-
-                // TODO: Dodać tłumaczenia dla opcji do globalnego resource file np. OptionsMenu.nazwa_node
                 item.Text = resourceManager.GetString("OptionsMenu." + item.Name) != null ? resourceManager.GetString("OptionsMenu." + item.Name) : "<<EMPTY>>";
             }
         }
