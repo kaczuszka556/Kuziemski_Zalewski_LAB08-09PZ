@@ -207,8 +207,10 @@ namespace GUI
             {
                 if (item.Rectangle.Contains(e.Location))
                 {
-                    // TODO: Tutaj będzie wywoływanie okienka od szczegółów wydarzenia
-                    Debug.WriteLine(item.Wydarzenie.Nazwa); break;
+                    EventDetails eventDetails = new EventDetails(item.Wydarzenie);
+                    eventDetails.Show();
+                    break;
+                    
                 }
             }
         }

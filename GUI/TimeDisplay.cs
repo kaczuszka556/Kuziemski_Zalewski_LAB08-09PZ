@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kuziemski_Zalewski_LAB08_09PZ_BK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,18 @@ namespace GUI
 
         public delegate void CurrentDateLinkClicked();
         public event CurrentDateLinkClicked OnCurrentDateLinkClicked;
+        private PreferencjeService PreferencjeService;
         public TimeDisplay()
         {
+
+
+            PreferencjeService = new PreferencjeService();
+
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
+
             InitializeComponent();
             UpdateTime();
             timer.Interval = 1000;
