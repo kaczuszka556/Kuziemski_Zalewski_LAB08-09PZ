@@ -63,7 +63,7 @@ namespace GUI
             DateTime EndDate = EndDatePicker.Value.Date;
             Wydarzenie.Koniec = EndDate.Date.Add(EndTimePicker.Value.TimeOfDay);
 
-            if (EndDate < StartDate)
+            if (Wydarzenie.Koniec < Wydarzenie.Poczatek)
             {
                 MessageBox.Show(GlobalLocalization.GetString("AddEventWindow.IncorrectDates"), GlobalLocalization.GetString("AddEventWindow.ValidationError"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -73,11 +73,26 @@ namespace GUI
             Wydarzenie.Opis = EventDescriptionInput.Text;
 
             KalendarzService kalendarzService = new KalendarzService();
-            kalendarzService.AddWydarznie(Wydarzenie);
 
-            MessageBox.Show(GlobalLocalization.GetString("AddEventWindow.Success"), GlobalLocalization.GetString("AddEventWindow.SuccessTitle"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GlobalEventManager.TriggerOnEventCalendarChanged();
-            this.Close();
+            try
+            {
+                kalendarzService.AddWydarznie(Wydarzenie);
+                MessageBox.Show(GlobalLocalization.GetString("AddEventWindow.Success"), GlobalLocalization.GetString("AddEventWindow.SuccessTitle"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GlobalEventManager.TriggerOnEventCalendarChanged();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(GlobalLocalization.GetString("AddEventWindow.UnkownError"), GlobalLocalization.GetString("AddEventWindow.ValidationError"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                this.Close();
+            }
+
+            
+
+            
         }
     }
 }

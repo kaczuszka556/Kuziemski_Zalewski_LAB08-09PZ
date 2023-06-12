@@ -141,4 +141,7 @@
   <data name="AddEventWindow.SuccessTitle" xml:space="preserve">
     <value>Event added</value>
   </data>
+  <data name="AddEventWindow.UnkownError" xml:space="preserve">
+    <value>Error occuerd when adding new event!</value>
+  </data>
 </root>

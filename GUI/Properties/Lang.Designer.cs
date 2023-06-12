@@ -97,6 +97,15 @@ namespace GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error occuerd when adding new event!.
+        /// </summary>
+        internal static string AddEventWindow_UnkownError {
+            get {
+                return ResourceManager.GetString("AddEventWindow.UnkownError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Validation Error.
         /// </summary>
         internal static string AddEventWindow_ValidationErrorTitle {

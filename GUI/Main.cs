@@ -43,7 +43,7 @@ namespace GUI
                 new System.Globalization.CultureInfo(PreferencjeService.PobierzJezyk());
 
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
- 
+
             IEnumerable<Control> list = this.GetAllControls();
             foreach (Control item in list)
             {

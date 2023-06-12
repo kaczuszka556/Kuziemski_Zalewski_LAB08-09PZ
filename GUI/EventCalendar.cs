@@ -94,7 +94,9 @@ namespace GUI
 
                     rectangle.Width = neighboursCount != 1 ? EventCalendarEventPanels[i].Width / neighboursCount : EventCalendarEventPanels[i].Width;
 
-                    if (item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
+                    if (item.Poczatek.Date == item.Koniec.Date && item.Poczatek.Hour == item.Koniec.Hour)
+                        rectangle.Height = (EventCalendarEventPanels[i].Height / 24) /2; 
+                    else if (item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day != item.Koniec.Day)
                         rectangle.Height = EventCalendarEventPanels[i].Height;
                     else if (item.Koniec.Day != item.Poczatek.Day && daysInWeek[i].Day == item.Koniec.Day)
                         rectangle.Height = (EventCalendarEventPanels[i].Height / 24) * item.Koniec.Hour;
@@ -153,6 +155,16 @@ namespace GUI
 
 
             base.OnPaint(e);
+
+
+
+            for (int i = Height/24; i < Height; i+=(Height/24) *2)
+            {
+                e.Graphics.DrawLine(new Pen(Color.FromArgb(50, Color.Black), 1f), 0, i, Width, i);
+            }
+
+
+
 
             int cornerRadius = 4;
 

@@ -22,8 +22,8 @@ namespace GUI
         public TimeDisplay()
         {
             InitializeComponent();
-          
-            
+
+
         }
 
         private void UpdateLanguage()

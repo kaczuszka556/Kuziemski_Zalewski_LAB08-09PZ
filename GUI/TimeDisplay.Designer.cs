@@ -36,7 +36,7 @@
             // 
             TimeDisplayClock.AutoSize = true;
             TimeDisplayClock.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            TimeDisplayClock.Location = new Point(13, 16);
+            TimeDisplayClock.Location = new Point(3, 16);
             TimeDisplayClock.Name = "TimeDisplayClock";
             TimeDisplayClock.Size = new Size(173, 54);
             TimeDisplayClock.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             TimeDisplayDate.AutoSize = true;
             TimeDisplayDate.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            TimeDisplayDate.Location = new Point(13, 83);
+            TimeDisplayDate.Location = new Point(3, 82);
             TimeDisplayDate.Name = "TimeDisplayDate";
             TimeDisplayDate.Size = new Size(288, 37);
             TimeDisplayDate.TabIndex = 1;
@@ -61,7 +61,7 @@
             Controls.Add(TimeDisplayDate);
             Controls.Add(TimeDisplayClock);
             Name = "TimeDisplay";
-            Size = new Size(432, 137);
+            Size = new Size(294, 137);
             ResumeLayout(false);
             PerformLayout();
         }
