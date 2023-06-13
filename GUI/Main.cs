@@ -49,6 +49,7 @@ namespace GUI
                 resources.ApplyResources(item, item.Name);
             }
 
+            UpdateCalendar();
         }
 
         private void UpdateCalendar()

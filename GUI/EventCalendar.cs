@@ -53,7 +53,7 @@ namespace GUI
             KalendarzService kalendarzService = new KalendarzService();
             for (int i = 0; i < daysInWeek.Length; i++)
             {
-                EventCalendarDayLabels[i].Text = daysInWeek[i].ToString();
+                EventCalendarDayLabels[i].Text = daysInWeek[i].ToString("dddd dd/MM/yyyy");
                 EventCalendarEventPanels[i].Events.Clear();
                 List<Wydarzenie> wydarzenia = kalendarzService.ZnajdżWydarzeniaDnia(daysInWeek[i]);
 
